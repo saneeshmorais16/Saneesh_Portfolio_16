@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="SM monogram">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"></stop>
+      <stop offset="100%" stop-color="#3b82f6"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Hex container -->
+  <polygon points="64,6 116,36 116,92 64,122 12,92 12,36" fill="none" stroke="url(#g)" stroke-width="6" stroke-linejoin="round"></polygon>
+
+  <!-- S (left ribbon) -->
+  <path d="M80 30H56c-14 0-22 8-22 18 0 9 6 15 17 17l19 3c6 1 9 3 9 7 0 5-4 9-12 9H44" fill="none" stroke="url(#g)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+
+  <!-- M (right angles) -->
+  <path d="M90 94V42l-10 16-10-16v52" fill="none" stroke="#fff" stroke-opacity=".92" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
