@@ -5,89 +5,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Saneesh Morais | AI Engineer & Tech Founder</title>
   <meta name="description" content="Founder-grade portfolio of Saneesh Morais — AI Engineer & Software Architect building intelligent products where data meets design."/>
+  <meta name="theme-color" content="#06b6d4"/>
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"/>
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+      <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="%2306b6d4"/><stop offset="1" stop-color="%233b82f6"/></linearGradient></defs>
+      <rect width="96" height="96" rx="18" fill="%230b0f1a"/>
+      <path d="M24 64c8-2 15-7 16-16-6 4-13 3-16-5-3-8 3-15 10-17 9-2 18 3 23 11 5 8 5 19 0 27-6 9-16 14-27 14h-6z"
+            fill="url(%23g)"/>
+      <text x="52" y="62" font-family="Arial" font-size="28" fill="%23e5e7eb" font-weight="700">SM</text>
+    </svg>'/>
 
   <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Saneesh Morais | AI Engineer & Tech Founder"/>
-  <meta property="og:description" content="Projects, case studies, roadmap, and impact — a founder-grade showcase."/>
+  <meta property="og:title" content="Saneesh Morais | Final Year Student & AI engineer"/>
+  <meta property="og:description" content="Projects, case studies, roadmap, and impact, results"/>
   <meta property="og:type" content="website"/>
   <meta property="og:image" content="https://dummyimage.com/1200x630/0b0f1a/e5e7eb&text=Saneesh+Morais"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Saneesh Morais | AI Engineer & Tech Founder"/>
-  <meta name="twitter:description" content="Projects, case studies, roadmap, and impact — a founder-grade showcase."/>
+  <meta name="twitter:title" content="Saneesh Morais | Final Year Student & AI engineer"/>
+  <meta name="twitter:description" content="Projects, case studies, roadmap, and impact, results"/>
   <meta name="twitter:image" content="https://dummyimage.com/1200x630/0b0f1a/e5e7eb&text=Saneesh+Morais"/>
 
-  <!-- Californian FB + base fonts -->
-<style>
-  @font-face {
-    font-family:'CalifornianFB';
-    src:local('Californian FB'),
-        url('https://fonts.cdnfonts.com/s/10461/CalifornianFB-Regular.woff') format('woff');
-    font-weight:400; font-style:normal; font-display:swap;
-  }
-  :root{
-    --brand:#06b6d4; --brand2:#3b82f6;
-    /* single dark theme constants */
-    --bg:#0b0f1a;        /* page background */
-    --fg:#e5e7eb;        /* default text */
-    --card:#0f172a;      /* card backgrounds */
-    --muted:#94a3b8;     /* muted text */
-    --ring:#06b6d4;      /* focus ring */
-  }
+  <!-- Perf: preload brand font -->
+  <link rel="preload" href="https://fonts.cdnfonts.com/s/10461/CalifornianFB-Regular.woff" as="font" type="font/woff" crossorigin>
 
-  html,body{ height:100% }
-  body{ font-family:'CalifornianFB',serif; background:var(--bg); color:var(--fg); }
+  <!-- Californian FB + base -->
+  <style>
+    @font-face {
+      font-family:'CalifornianFB';
+      src:local('Californian FB'),
+          url('https://fonts.cdnfonts.com/s/10461/CalifornianFB-Regular.woff') format('woff');
+      font-weight:400; font-style:normal; font-display:swap;
+    }
+    :root{
+      --brand:#06b6d4; --brand2:#3b82f6;
+      --bg:#0b0f1a;        /* page background */
+      --fg:#e5e7eb;        /* default text */
+      --card:#0f172a;      /* card backgrounds */
+      --muted:#94a3b8;     /* muted text */
+      --ring:#06b6d4;      /* focus ring */
+    }
 
-  .gradient-text{ background:linear-gradient(90deg,var(--brand),var(--brand2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent }
-  .fade-in{ animation:fadeIn 1s ease-in both }
-  .slide-up{ animation:slideUp .8s ease-out both }
-  @keyframes fadeIn{ from{opacity:0} to{opacity:1} }
-  @keyframes slideUp{ from{opacity:0; transform:translateY(20px)} to{opacity:1; transform:translateY(0)} }
-  .glow:hover{ box-shadow:0 0 24px rgba(6,182,212,.45); transform:translateY(-2px) scale(1.02) }
-  .card-border{ position:relative; border:1px solid rgba(255,255,255,.08) }
-  .card-border:before{
-    content:""; position:absolute; inset:-1px; z-index:0; border-radius:.75rem;
-    background:linear-gradient(120deg,rgba(6,182,212,.35),rgba(59,130,246,.2),transparent 60%);
-    mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);
-    -webkit-mask-composite:xor; mask-composite:exclude; padding:1px; pointer-events:none;
-  }
-  .hero-title{
-    font-weight:800; line-height:1.05; font-size:clamp(2.4rem,6vw,4.6rem);
-    letter-spacing:.01em; margin:0 0 .5rem;
-    background:linear-gradient(90deg,var(--brand),var(--brand2));
-    -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-    -webkit-text-stroke:.35px rgba(255,255,255,.18);
-    text-rendering:optimizeLegibility;
-  }
-  .hero-accent{ position:relative; display:inline-block }
-  .hero-accent:after{
-    content:""; position:absolute; left:0; right:0; bottom:-10px; height:3px;
-    background:linear-gradient(90deg,rgba(6,182,212,.9),rgba(59,130,246,.9));
-    border-radius:4px; filter:drop-shadow(0 0 6px rgba(59,130,246,.25));
-  }
-  .hero-quote{ margin-top:1.1rem; font-size:clamp(1rem,2.2vw,1.25rem); color:#c7d2fe; font-style:italic }
-  .chip{ display:inline-block; padding:.35rem .7rem; border:1px dashed rgba(255,255,255,.25); border-radius:999px; font-size:.9rem }
-  .badge-upcoming{ position:absolute; top:12px; right:12px; background:linear-gradient(90deg,#fde68a,#f59e0b); color:#111827; font-weight:700; font-size:.75rem; padding:.25rem .5rem; border-radius:.5rem; box-shadow:0 4px 12px rgba(245,158,11,.35) }
-  .faq-a{ display:none } .faq-q[aria-expanded="true"] + .faq-a{ display:block }
-  .focus-ring:focus-visible{ outline:3px solid var(--ring); outline-offset:2px }
-  #toTop{ position:fixed; right:1rem; bottom:1rem; display:none }
-  #progress{ position:fixed; top:0; left:0; height:3px; width:0; background:linear-gradient(90deg,var(--brand),var(--brand2)); z-index:70 }
-</style>
+    html,body{ height:100% }
+    body{ font-family:'CalifornianFB',serif; background:var(--bg); color:var(--fg); }
 
+    .gradient-text{ background:linear-gradient(90deg,var(--brand),var(--brand2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent }
+    .fade-in{ animation:fadeIn 1s ease-in both }
+    .slide-up{ animation:slideUp .8s ease-out both }
+    @keyframes fadeIn{ from{opacity:0} to{opacity:1} }
+    @keyframes slideUp{ from{opacity:0; transform:translateY(20px)} to{opacity:1; transform:translateY(0)} }
+    .glow:hover{ box-shadow:0 0 24px rgba(6,182,212,.45); transform:translateY(-2px) scale(1.02) }
+    .card-border{ position:relative; border:1px solid rgba(255,255,255,.08) }
+    .card-border:before{
+      content:""; position:absolute; inset:-1px; z-index:0; border-radius:.75rem;
+      background:linear-gradient(120deg,rgba(6,182,212,.35),rgba(59,130,246,.2),transparent 60%);
+      mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);
+      -webkit-mask-composite:xor; mask-composite:exclude; padding:1px; pointer-events:none;
+    }
+    .hero-title{
+      font-weight:800; line-height:1.05; font-size:clamp(2.4rem,6vw,4.6rem);
+      letter-spacing:.01em; margin:0 0 .5rem;
+      background:linear-gradient(90deg,var(--brand),var(--brand2));
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+      -webkit-text-stroke:.35px rgba(255,255,255,.18);
+      text-rendering:optimizeLegibility;
+    }
+    .hero-accent{ position:relative; display:inline-block }
+    .hero-accent:after{
+      content:""; position:absolute; left:0; right:0; bottom:-10px; height:3px;
+      background:linear-gradient(90deg,rgba(6,182,212,.9),rgba(59,130,246,.9));
+      border-radius:4px; filter:drop-shadow(0 0 6px rgba(59,130,246,.25));
+    }
+    .hero-quote{ margin-top:1.1rem; font-size:clamp(1rem,2.2vw,1.25rem); color:#c7d2fe; font-style:italic }
+    .chip{ display:inline-block; padding:.35rem .7rem; border:1px dashed rgba(255,255,255,.25); border-radius:999px; font-size:.9rem }
+    .badge-upcoming{ position:absolute; top:12px; right:12px; background:linear-gradient(90deg,#fde68a,#f59e0b); color:#111827; font-weight:700; font-size:.75rem; padding:.25rem .5rem; border-radius:.5rem; box-shadow:0 4px 12px rgba(245,158,11,.35) }
+    .faq-a{ display:none } .faq-q[aria-expanded="true"] + .faq-a{ display:block }
+    .focus-ring:focus-visible{ outline:3px solid var(--ring); outline-offset:2px }
+    #toTop{ position:fixed; right:1rem; bottom:1rem; display:none }
+    #progress{ position:fixed; top:0; left:0; height:3px; width:0; background:linear-gradient(90deg,var(--brand),var(--brand2)); z-index:70 }
 
-  <!-- Schema.org -->
+    /* in-view animation utility */
+    .reveal{ opacity:0; transform:translateY(12px); transition:opacity .6s ease, transform .6s ease }
+    .reveal.in{ opacity:1; transform:none }
+
+    /* Command palette list */
+    #cmdk-list li { padding:.75rem 1rem; cursor:pointer }
+    #cmdk-list li:hover, #cmdk-list li[aria-selected="true"] { background:rgba(6,182,212,.12) }
+
+    /* Print-ready CV export */
+    @media print{
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      header, #progress, #toTop, video, .bg-black\/20, .bg-black\/10 { display:none !important; }
+      a::after { content:" (" attr(href) ")"; font-size:0.85em; color:#64748b; }
+      section { break-inside: avoid; }
+      body { background: #fff; color:#111827; }
+    }
+
+    /* reduced motion: pause video */
+    @media (prefers-reduced-motion: reduce){
+      video[autoplay]{ animation: none; transition: none; }
+    }
+  </style>
+
+  <!-- Schema.org (Person) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Person",
     "name":"Saneesh Morais",
     "description":"AI Engineer & Software Architect in London, building intelligent products.",
-    "url":"https://saneeshmorais16.github.io/Saneesh_Portfolio_16/",
+    "url":"https://saneeshmorais16.github.io/saneesh_portfolio/",
     "jobTitle":"AI Engineer & Tech Founder",
     "email":"mailto:saneeshmorais@gmail.com",
     "sameAs":[
@@ -105,7 +136,17 @@
   <!-- NAV -->
   <header class="sticky top-0 z-50 bg-black/70 backdrop-blur-md border-b border-white/10">
     <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#" class="text-xl md:text-2xl font-bold tracking-wide gradient-text">Saneesh Morais</a>
+      <!-- BRAND with inline logo SVG -->
+      <a href="#" class="flex items-center gap-2" aria-label="Home">
+        <svg width="28" height="28" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs><linearGradient id="g2" x1="0" x2="1"><stop stop-color="#06b6d4"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs>
+          <rect width="96" height="96" rx="18" fill="#0b0f1a"/>
+          <path d="M24 64c8-2 15-7 16-16-6 4-13 3-16-5-3-8 3-15 10-17 9-2 18 3 23 11 5 8 5 19 0 27-6 9-16 14-27 14h-6z" fill="url(#g2)"/>
+          <text x="52" y="62" font-family="Arial" font-size="28" fill="#e5e7eb" font-weight="700">SM</text>
+        </svg>
+        <span class="text-xl md:text-2xl font-bold tracking-wide gradient-text">Saneesh Morais</span>
+      </a>
+
       <ul class="hidden md:flex items-center gap-6">
         <li><a class="hover:text-cyan-400" href="#projects">Projects</a></li>
         <li><a class="hover:text-cyan-400" href="#build">What I Build</a></li>
@@ -113,10 +154,11 @@
         <li><a class="hover:text-cyan-400" href="#metrics">Impact</a></li>
         <li><a class="hover:text-cyan-400" href="#roadmap">Roadmap</a></li>
         <li><a class="hover:text-cyan-400" href="#press">Press</a></li>
-        <li><a class="hover:text-cyan-400" href="#fav-questions">Interview Qs</a></li>
+        <li><a class="hover:text-cyan-400" href="#fav-questions">Interview Q/A</a></li>
         <li><a class="hover:text-cyan-400" href="#contact">Contact</a></li>
       </ul>
       <div class="flex items-center gap-3">
+        <button id="openCmd" title="Command Palette (Ctrl/⌘+K)" class="hidden md:inline-block px-3 py-2 rounded-lg border border-white/20 hover:bg-white/10 focus-ring">Quick Nav</button>
         <a href="Saneesh_Morais_Resume.pdf" download class="hidden md:inline-block px-4 py-2 rounded-lg bg-cyan-500 text-black font-semibold glow focus-ring">Download Résumé</a>
         <button id="navBtn" class="md:hidden px-3 py-2 border border-white/20 rounded focus-ring" aria-haspopup="true" aria-controls="mobileMenu" aria-expanded="false">Menu</button>
       </div>
@@ -147,7 +189,7 @@
         Building Intelligent Products<br class="hidden md:block"/>
         <span class="hero-accent">Where Data Meets Design</span>
       </h1>
-      <p class="hero-quote">“known is drop unkown is ocean.”</p>
+      <p class="hero-quote">“known is drop ocean is huge.”</p>
       <p class="mt-5 text-lg md:text-xl text-gray-200">Student, Aspiring AI Engineer & Software Architect • London • <span class="text-cyan-400">Designed Smart Mixologist</span></p>
       <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
         <a href="#projects" class="px-6 py-3 rounded-lg bg-cyan-500 text-black font-semibold glow focus-ring">Explore Projects</a>
@@ -163,7 +205,7 @@
     <!-- ABOUT -->
     <section id="about" class="max-w-7xl mx-auto px-6 py-16">
       <div class="grid md:grid-cols-3 gap-10 items-start">
-        <div class="md:col-span-2">
+        <div class="md:col-span-2 reveal">
           <h2 class="text-3xl font-bold mb-4">About Me</h2>
           <p class="text-slate-300 leading-relaxed">
             I’m a BSc Computing with AI Technology student in London, focused on
@@ -174,12 +216,12 @@
             <a class="text-cyan-400 hover:underline" href="https://hippodromecasino.com" target="_blank" rel="noopener">Hippodrome Casino</a>.
           </p>
         </div>
-        <div class="space-y-3">
+        <div class="space-y-3 reveal">
           <div class="text-sm text-slate-400">Primary Links</div>
           <button id="copyEmail" class="block text-left text-cyan-400 hover:underline focus-ring">Copy Email: saneeshmorais@gmail.com</button>
           <a class="block hover:text-cyan-400" target="_blank" href="https://www.linkedin.com/in/saneesh-morais-581458227/">LinkedIn</a>
           <a class="block hover:text-cyan-400" target="_blank" href="https://github.com/saneeshmorais16">GitHub</a>
-          <a class="block hover:text-cyan-400" target="_blank" href="https://saneeshmorais16.github.io/Saneesh_Portfolio_16/">Portfolio</a>
+          <a class="block hover:text-cyan-400" target="_blank" href="https://saneeshmorais16.github.io/saneesh_portfolio/">Portfolio</a>
           <a class="block hover:text-cyan-400" download href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3AMorais%3B%20Saneesh%0AFN%3ASaneesh%20Morais%0AEMAIL%3BTYPE%3DINTERNET%3A%20saneeshmorais%40gmail.com%0AURL%3Ahttps%3A%2F%2Fgithub.com%2Fsaneeshmorais16%0AEND%3AVCARD">Download vCard</a>
         </div>
       </div>
@@ -190,17 +232,17 @@
       <div class="max-w-7xl mx-auto px-6 py-16">
         <h2 class="text-3xl font-bold mb-10">What I Build</h2>
         <div class="grid md:grid-cols-3 gap-6">
-          <div class="p-6 rounded-xl bg-[var(--card)] card-border">
+          <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
             <h3 class="text-xl font-semibold mb-2">AI Prototypes → Products</h3>
             <p class="text-slate-300">From quick LLM demos to robust APIs with evaluation, guardrails, and observability.</p>
             <p class="text-sm text-slate-400 mt-2">FastAPI • RAG • Embeddings • Eval</p>
           </div>
-          <div class="p-6 rounded-xl bg-[var(--card)] card-border">
+          <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
             <h3 class="text-xl font-semibold mb-2">Data & Analytics</h3>
             <p class="text-slate-300">Scraping, pipelines, and dashboards delivering actionable insights and ROI.</p>
             <p class="text-sm text-slate-400 mt-2">Python • SQL • Pandas • Streamlit</p>
           </div>
-          <div class="p-6 rounded-xl bg-[var(--card)] card-border">
+          <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
             <h3 class="text-xl font-semibold mb-2">Modern Web Apps</h3>
             <p class="text-slate-300">Clean, responsive, founder-friendly UIs with strong UX and performance.</p>
             <p class="text-sm text-slate-400 mt-2">Next.js • Tailwind • Supabase</p>
@@ -217,17 +259,18 @@
           <a href="https://github.com/saneeshmorais16" target="_blank" class="text-cyan-400 hover:underline">View GitHub →</a>
         </div>
 
-        <!-- Filters -->
-        <div class="mb-8 flex flex-wrap gap-3">
+        <!-- Filters + Search -->
+        <div class="mb-6 flex flex-wrap gap-3 items-center">
           <button class="chip focus-ring" data-filter="all">All</button>
           <button class="chip focus-ring" data-filter="ai">AI</button>
           <button class="chip focus-ring" data-filter="data">Data</button>
           <button class="chip focus-ring" data-filter="web">Web</button>
+          <input id="projectSearch" type="search" placeholder="Search projects…" class="px-4 py-2 rounded-lg text-black w-60 ml-2" aria-label="Search projects"/>
         </div>
 
         <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-7">
           <!-- 1 -->
-          <article class="rounded-xl p-6 bg-[var(--card)] card-border" data-tags="ai web">
+          <article class="rounded-xl p-6 bg-[var(--card)] card-border reveal" data-tags="ai web" data-title="Smart Mixologist Cocktail AI">
             <h3 class="text-xl font-semibold mb-2">🍸 Smart Mixologist (Cocktail AI)</h3>
             <p class="text-slate-300">AI bartender recommending cocktails by mood, ingredients, or “surprise me”.</p>
             <p class="text-sm text-slate-400 mt-2">FastAPI • Next.js • PostgreSQL • OpenAI</p>
@@ -238,7 +281,7 @@
           </article>
 
           <!-- 2 -->
-          <article class="rounded-xl p-6 bg-[var(--card)] card-border" data-tags="data ai">
+          <article class="rounded-xl p-6 bg-[var(--card)] card-border reveal" data-tags="data ai" data-title="Casino Revenue Dashboard">
             <h3 class="text-xl font-semibold mb-2">🎰 Casino Revenue Dashboard</h3>
             <p class="text-slate-300">Segmentation & revenue trends with actionable insights and reporting.</p>
             <p class="text-sm text-slate-400 mt-2">Python • SQL • Pandas • Streamlit</p>
@@ -248,7 +291,7 @@
           </article>
 
           <!-- 3 -->
-          <article class="rounded-xl p-6 bg-[var(--card)] card-border" data-tags="data">
+          <article class="rounded-xl p-6 bg-[var(--card)] card-border reveal" data-tags="data" data-title="Job Market Intelligence">
             <h3 class="text-xl font-semibold mb-2">📊 Job Market Intelligence</h3>
             <p class="text-slate-300">Scraped 500+ UK AI/tech roles to map skills & salaries; produced dashboards.</p>
             <p class="text-sm text-slate-400 mt-2">Python • BeautifulSoup • Viz</p>
@@ -258,7 +301,7 @@
           </article>
 
           <!-- 4 -->
-          <article class="rounded-xl p-6 bg-[var(--card)] card-border" data-tags="ai web">
+          <article class="rounded-xl p-6 bg-[var(--card)] card-border reveal" data-tags="ai web" data-title="AI Resume Analyzer">
             <h3 class="text-xl font-semibold mb-2">📄 AI Resume Analyzer</h3>
             <p class="text-slate-300">LLM matcher aligning CVs with job descriptions for better fit.</p>
             <p class="text-sm text-slate-400 mt-2">Hugging Face • Streamlit • NLP</p>
@@ -268,7 +311,7 @@
           </article>
 
           <!-- 5 -->
-          <article class="rounded-xl p-6 bg-[var(--card)] card-border" data-tags="ai web">
+          <article class="rounded-xl p-6 bg-[var(--card)] card-border reveal" data-tags="ai web" data-title="Nestdore Property Match">
             <h3 class="text-xl font-semibold mb-2">🏠 Nestdore Property Match</h3>
             <p class="text-slate-300">Embeddings + vector search to match tenants & landlords.</p>
             <p class="text-sm text-slate-400 mt-2">Supabase • Postgres • pgvector</p>
@@ -278,7 +321,7 @@
           </article>
 
           <!-- 6 -->
-          <article class="rounded-xl p-6 bg-[var(--card)] card-border" data-tags="ai">
+          <article class="rounded-xl p-6 bg-[var(--card)] card-border reveal" data-tags="ai" data-title="SanMind Wellbeing Assistant">
             <h3 class="text-xl font-semibold mb-2">🧠 SanMind (Concept)</h3>
             <p class="text-slate-300">Wellbeing assistant: journaling, RAG insights, compassionate coaching.</p>
             <p class="text-sm text-slate-400 mt-2">LLMs • Vector DB • RAG</p>
@@ -288,7 +331,7 @@
           </article>
 
           <!-- 7 -->
-          <article class="rounded-xl p-6 bg-[var(--card)] card-border" data-tags="ai data">
+          <article class="rounded-xl p-6 bg-[var(--card)] card-border reveal" data-tags="ai data" data-title="Savant NLP Research Assistant">
             <h3 class="text-xl font-semibold mb-2">🔎 Savant NLP Research Assistant</h3>
             <p class="text-slate-300">Automates research synthesis; prompt pipelines & evaluation.</p>
             <p class="text-sm text-slate-400 mt-2">Python • Orchestration • Evals</p>
@@ -298,7 +341,7 @@
           </article>
 
           <!-- 8 -->
-          <article class="rounded-xl p-6 bg-[var(--card)] card-border" data-tags="web data">
+          <article class="rounded-xl p-6 bg-[var(--card)] card-border reveal" data-tags="web data" data-title="ML Experiment Tracker">
             <h3 class="text-xl font-semibold mb-2">🧪 ML Experiment Tracker</h3>
             <p class="text-slate-300">Local-first tracker for experiments, metrics, and artifacts.</p>
             <p class="text-sm text-slate-400 mt-2">FastAPI • SQLite • Charts</p>
@@ -308,24 +351,24 @@
           </article>
         </div>
 
-       
+        <!-- UPCOMING -->
         <div class="mt-12">
           <h3 class="text-2xl font-bold mb-4">Upcoming</h3>
           <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-7">
-            <article class="rounded-xl p-6 bg-[var(--card)] card-border relative" data-tags="ai web">
+            <article class="rounded-xl p-6 bg-[var(--card)] card-border relative reveal" data-tags="ai web">
               <span class="badge-upcoming">Upcoming</span>
               <h4 class="text-lg font-semibold mb-2">🧪 Smart Mixologist v2 (Vision + RAG)</h4>
               <p class="text-slate-300">Camera ingredient parsing, taste embeddings, vector recipe search.</p>
               <p class="text-sm text-slate-400 mt-2">CLIP • FastAPI • pgvector • Next.js</p>
               <div class="mt-3"><button class="text-cyan-400 hover:underline" onclick="openModal('mixologistV2')">Overview</button></div>
             </article>
-            <article class="rounded-xl p-6 bg-[var(--card)] card-border relative" data-tags="data">
+            <article class="rounded-xl p-6 bg-[var(--card)] card-border relative reveal" data-tags="data">
               <span class="badge-upcoming">Upcoming</span>
               <h4 class="text-lg font-semibold mb-2">📈 Job Market Radar</h4>
               <p class="text-slate-300">Daily scraping + trend charts; alerts for spikes in AI skill demand.</p>
               <p class="text-sm text-slate-400 mt-2">Airflow • Timeseries • Viz</p>
             </article>
-            <article class="rounded-xl p-6 bg-[var(--card)] card-border relative" data-tags="ai">
+            <article class="rounded-xl p-6 bg-[var(--card)] card-border relative reveal" data-tags="ai">
               <span class="badge-upcoming">Upcoming</span>
               <h4 class="text-lg font-semibold mb-2">🔍 Research Summarizer</h4>
               <p class="text-slate-300">Upload PDFs → RAG + critique pass → concise brief + citations.</p>
@@ -336,100 +379,93 @@
       </div>
     </section>
 
-    
-<section id="stack" class="max-w-7xl mx-auto px-6 py-16">
-  <h2 class="text-3xl font-bold mb-10">Tech & Tools</h2>
+    <!-- STACK (your grouped stacks) -->
+    <section id="stack" class="max-w-7xl mx-auto px-6 py-16">
+      <h2 class="text-3xl font-bold mb-10">Tech & Tools</h2>
+      <!-- Languages -->
+      <div class="mb-6 reveal">
+        <h3 class="text-xl font-semibold mb-3">Languages</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Python</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">JavaScript</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">TypeScript (basic)</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">SQL</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">HTML</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">CSS / Tailwind</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Markdown</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Bash (basic)</span>
+        </div>
+      </div>
+      <!-- Frontend -->
+      <div class="mb-6 reveal">
+        <h3 class="text-xl font-semibold mb-3">Frontend</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Next.js</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">React</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Tailwind CSS</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Framer Motion</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">shadcn/ui (usage)</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Chart.js / Recharts (basic)</span>
+        </div>
+      </div>
+      <!-- Backend & APIs -->
+      <div class="mb-6 reveal">
+        <h3 class="text-xl font-semibold mb-3">Backend & APIs</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">FastAPI</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Node.js (basic)</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Next.js API Routes</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">REST</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Webhooks / OAuth (basic)</span>
+        </div>
+      </div>
+      <!-- AI / ML -->
+      <div class="mb-6 reveal">
+        <h3 class="text-xl font-semibold mb-3">AI / ML</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">NLP</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">LLMs</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">RAG / Embeddings</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">OpenAI API</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Hugging Face</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Prompt Evals / Guardrails (basic)</span>
+        </div>
+      </div>
+      <!-- Data / Scraping / Apps -->
+      <div class="mb-6 reveal">
+        <h3 class="text-xl font-semibold mb-3">Data, Scraping & Apps</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Pandas</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">BeautifulSoup</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Matplotlib</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Streamlit</span>
+        </div>
+      </div>
+      <!-- Databases & Storage -->
+      <div class="mb-6 reveal">
+        <h3 class="text-xl font-semibold mb-3">Databases & Storage</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">PostgreSQL</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">SQLite</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Supabase</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">pgvector</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">SQLAlchemy (basic)</span>
+        </div>
+      </div>
+      <!-- Dev / Ops -->
+      <div class="mb-6 reveal">
+        <h3 class="text-xl font-semibold mb-3">Dev & Ops</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Git & GitHub</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">GitHub Pages</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">GitHub Actions (basic)</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Docker (basic)</span>
+          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">AWS (intro)</span>
+        </div>
+      </div>
+    </section>
 
-  <!-- Languages -->
-  <div class="mb-6">
-    <h3 class="text-xl font-semibold mb-3">Languages</h3>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Python</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">JavaScript</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">TypeScript (basic)</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">SQL</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">HTML</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">CSS / Tailwind</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Markdown</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Bash (basic)</span>
-    </div>
-  </div>
-
-  <!-- Frontend -->
-  <div class="mb-6">
-    <h3 class="text-xl font-semibold mb-3">Frontend</h3>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Next.js</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">React</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Tailwind CSS</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Framer Motion</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">shadcn/ui (usage)</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Chart.js / Recharts (basic)</span>
-    </div>
-  </div>
-
-  <!-- Backend & APIs -->
-  <div class="mb-6">
-    <h3 class="text-xl font-semibold mb-3">Backend & APIs</h3>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">FastAPI</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Node.js (basic)</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Next.js API Routes</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">REST</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Webhooks / OAuth (basic)</span>
-    </div>
-  </div>
-
-  <!-- AI / ML -->
-  <div class="mb-6">
-    <h3 class="text-xl font-semibold mb-3">AI / ML</h3>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">NLP</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">LLMs</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">RAG / Embeddings</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">OpenAI API</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Hugging Face</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Prompt Evals / Guardrails (basic)</span>
-    </div>
-  </div>
-
-  <!-- Data / Scraping / Apps -->
-  <div class="mb-6">
-    <h3 class="text-xl font-semibold mb-3">Data, Scraping & Apps</h3>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Pandas</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">BeautifulSoup</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Matplotlib</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Streamlit</span>
-    </div>
-  </div>
-
-  <!-- Databases & Storage -->
-  <div class="mb-6">
-    <h3 class="text-xl font-semibold mb-3">Databases & Storage</h3>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">PostgreSQL</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">SQLite</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Supabase</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">pgvector</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">SQLAlchemy (basic)</span>
-    </div>
-  </div>
-
-  <!-- Dev / Ops -->
-  <div class="mb-6">
-    <h3 class="text-xl font-semibold mb-3">Dev & Ops</h3>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Git & GitHub</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">GitHub Pages</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">GitHub Actions (basic)</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Docker (basic)</span>
-      <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">AWS (intro)</span>
-    </div>
-  </div>
-</section>
-
-  
+    <!-- DEMO -->
     <section id="demo" class="max-w-7xl mx-auto px-6 py-16">
       <h2 class="text-3xl font-bold mb-3">Try Smart Mixologist (Mock)</h2>
       <p class="text-slate-300 mb-6">Type an ingredient—get a suggested cocktail. (Client-side mock; backend coming soon.)</p>
@@ -440,24 +476,24 @@
       </div>
     </section>
 
- 
+    <!-- METRICS -->
     <section id="metrics" class="bg-black/20 border-y border-white/10">
       <div class="max-w-7xl mx-auto px-6 py-16">
         <h2 class="text-3xl font-bold mb-10">Impact in Numbers</h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="p-6 rounded-xl bg-[var(--card)] card-border text-center">
+          <div class="p-6 rounded-xl bg-[var(--card)] card-border text-center reveal">
             <div class="text-4xl font-extrabold text-cyan-400">500+</div>
             <div class="text-slate-300 mt-2">Job posts analyzed</div>
           </div>
-          <div class="p-6 rounded-xl bg-[var(--card)] card-border text-center">
+          <div class="p-6 rounded-xl bg-[var(--card)] card-border text-center reveal">
             <div class="text-4xl font-extrabold text-cyan-400">15%</div>
             <div class="text-slate-300 mt-2">Reporting accuracy gain</div>
           </div>
-          <div class="p-6 rounded-xl bg-[var(--card)] card-border text-center">
+          <div class="p-6 rounded-xl bg-[var(--card)] card-border text-center reveal">
             <div class="text-4xl font-extrabold text-cyan-400">1,000+</div>
             <div class="text-slate-300 mt-2">Cocktails served</div>
           </div>
-          <div class="p-6 rounded-xl bg-[var(--card)] card-border text-center">
+          <div class="p-6 rounded-xl bg-[var(--card)] card-border text-center reveal">
             <div class="text-4xl font-extrabold text-cyan-400">4+</div>
             <div class="text-slate-300 mt-2">Industry projects</div>
           </div>
@@ -465,25 +501,25 @@
       </div>
     </section>
 
-    
+    <!-- ROADMAP -->
     <section id="roadmap" class="max-w-7xl mx-auto px-6 py-16">
       <h2 class="text-3xl font-bold mb-6">Roadmap</h2>
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border">
+        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
           <h3 class="font-semibold text-cyan-300 mb-2">Now</h3>
           <ul class="list-disc list-inside text-slate-300 space-y-1">
             <li>Ship Smart Mixologist mock + API skeleton</li>
             <li>Publish 2 case studies (Dashboard, Resume AI)</li>
           </ul>
         </div>
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border">
+        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
           <h3 class="font-semibold text-cyan-300 mb-2">Next</h3>
           <ul class="list-disc list-inside text-slate-300 space-y-1">
             <li>Vision ingredient parsing POC</li>
             <li>Job Market Radar with weekly trends</li>
           </ul>
         </div>
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border">
+        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
           <h3 class="font-semibold text-cyan-300 mb-2">Later</h3>
           <ul class="list-disc list-inside text-slate-300 space-y-1">
             <li>Agentic resume critique v2</li>
@@ -493,17 +529,17 @@
       </div>
     </section>
 
-    
+    <!-- PRESS / NEWSROOM -->
     <section id="press" class="max-w-7xl mx-auto px-6 py-16">
       <h2 class="text-3xl font-bold mb-6">Newsroom</h2>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border">
+        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
           <h3 class="font-semibold">One-liner & Tagline</h3>
           <p class="text-slate-300 mt-2"><strong>One-liner:</strong> London-based AI student & engineer turning practical ML ideas into shipped products.</p>
           <p class="text-slate-400 mt-1 italic">Tagline: “Where data meets design.”</p>
         </div>
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border">
+        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
           <h3 class="font-semibold">Media Contact</h3>
           <ul class="text-slate-300 mt-2 space-y-1">
             <li>Email: <a class="text-cyan-400 hover:underline" href="mailto:saneeshmorais@gmail.com">saneeshmorais@gmail.com</a></li>
@@ -512,7 +548,7 @@
             <li>Booking: <a class="text-cyan-400 hover:underline" href="mailto:saneeshmorais@gmail.com?subject=Speaking%20/%20Interview%20request">Request a call</a></li>
           </ul>
         </div>
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border">
+        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
           <h3 class="font-semibold">Fast Facts</h3>
           <ul class="text-slate-300 mt-2 space-y-1">
             <li>Role: AI Engineer & Software Architect</li>
@@ -524,7 +560,7 @@
       </div>
 
       <div class="grid md:grid-cols-3 gap-6 mt-6">
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border">
+        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
           <h3 class="font-semibold">Bio (90 words)</h3>
           <p class="text-slate-300 mt-2">
             Saneesh Morais is an AI Engineer and Software Architect based in London, focused on turning practical
@@ -536,24 +572,39 @@
             continuously. He values clarity, ownership, and fast feedback.
           </p>
         </div>
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border">
+        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
           <h3 class="font-semibold">Downloadables</h3>
           <ul class="text-slate-300 mt-2 space-y-1">
             <li><a class="text-cyan-400 hover:underline" href="Saneesh_Morais_Resume.pdf" download>Résumé (PDF)</a></li>
             <li><a class="text-cyan-400 hover:underline" href="saneesh_qr.png" download>QR Code (PNG)</a></li>
           </ul>
+          <button id="shareSite" class="mt-4 px-4 py-2 rounded-lg bg-cyan-500 text-black font-semibold glow focus-ring">Share site</button>
         </div>
-        <div class="mt-3 grid grid-cols-2 gap-3">
-  <img src="logo.svg" alt="Saneesh Morais wordmark" class="rounded-lg border border-gray-700 bg-black/30 p-3">
-</div>
+        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
+          <h3 class="font-semibold">Logos</h3>
+          <div class="mt-3 grid grid-cols-2 gap-3">
+            <!-- same inline SVG used for brand -->
+            <div class="rounded-lg border border-gray-700 bg-black/30 p-3 flex items-center justify-center">
+              <svg width="72" height="72" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs><linearGradient id="g3" x1="0" x2="1"><stop stop-color="#06b6d4"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs>
+                <rect width="96" height="96" rx="18" fill="#0b0f1a"/>
+                <path d="M24 64c8-2 15-7 16-16-6 4-13 3-16-5-3-8 3-15 10-17 9-2 18 3 23 11 5 8 5 19 0 27-6 9-16 14-27 14h-6z" fill="url(#g3)"/>
+                <text x="52" y="62" font-family="Arial" font-size="28" fill="#e5e7eb" font-weight="700">SM</text>
+              </svg>
+            </div>
+            <div class="rounded-lg border border-gray-700 bg-black/30 p-3 flex items-center justify-center">
+              <span class="text-2xl font-bold gradient-text">Saneesh&nbsp;Morais</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-   
+    <!-- FAVORITE QUESTIONS -->
     <section id="fav-questions" class="max-w-7xl mx-auto px-6 py-16">
       <h2 class="text-3xl font-bold mb-6">Favorite Interview Questions</h2>
       <div class="grid md:grid-cols-2 gap-6 mb-6">
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border">
+        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
           <h3 class="font-semibold">Product & Strategy</h3>
           <ul class="text-slate-300 mt-2 space-y-2 list-disc list-inside">
             <li>What real problem does this feature solve, and for whom?</li>
@@ -563,7 +614,7 @@
             <li>Tell me about a time a metric misled you. What did you change?</li>
           </ul>
         </div>
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border">
+        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
           <h3 class="font-semibold">Execution & Ownership</h3>
           <ul class="text-slate-300 mt-2 space-y-2 list-disc list-inside">
             <li>Describe a 0→1 project you shipped. What made it succeed?</li>
@@ -575,7 +626,7 @@
         </div>
       </div>
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border">
+        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
           <h3 class="font-semibold">AI / ML Depth</h3>
           <ul class="text-slate-300 mt-2 space-y-2 list-disc list-inside">
             <li>Walk me through your evals: datasets, metrics, and error analysis.</li>
@@ -585,7 +636,7 @@
             <li>Latency & cost: where have you optimized tokens or model choice?</li>
           </ul>
         </div>
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border">
+        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
           <h3 class="font-semibold">Data & Experimentation</h3>
           <ul class="text-slate-300 mt-2 space-y-2 list-disc list-inside">
             <li>What’s your smallest experiment to detect causal impact?</li>
@@ -599,50 +650,51 @@
       <p class="text-slate-500 text-sm mt-6">Tip: I value clarity, measurable impact, and fast feedback loops.</p>
     </section>
 
-
+    <!-- EXPERIENCE -->
     <section id="experience" class="max-w-7xl mx-auto px-6 py-16">
       <h2 class="text-3xl font-bold mb-8">Experience</h2>
       <ol class="relative border-l-2 border-cyan-500/60 pl-6 space-y-8">
-        <li>
+        <li class="reveal">
           <h3 class="font-semibold">Data Scientist Intern — Savant Technologies (2025)</h3>
           <p class="text-slate-400">NLP + LLM pipelines to accelerate research synthesis; evaluation framework.</p>
         </li>
-        <li>
+        <li class="reveal">
           <h3 class="font-semibold">AI Intern — Smallcap.ai (2024)</h3>
           <p class="text-slate-400">GenAI prototypes for financial intelligence; prompt engineering & analysis.</p>
         </li>
-        <li>
+        <li class="reveal">
           <h3 class="font-semibold">Bartender — Hippodrome Casino (2024–present)</h3>
           <p class="text-slate-400">High-volume service environment, communication, resilience, leadership.</p>
         </li>
       </ol>
     </section>
 
-  
+    <!-- CONTACT -->
     <section id="contact" class="max-w-7xl mx-auto px-6 py-16">
       <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div>
+        <div class="reveal">
           <h2 class="text-3xl font-bold mb-4">Let’s Connect</h2>
           <p class="text-slate-300 mb-6">Open to graduate roles, AI internships, and founder collaborations.</p>
           <div class="space-y-2">
             <div>Email: <a class="text-cyan-400 hover:underline" href="mailto:saneeshmorais@gmail.com">saneeshmorais@gmail.com</a></div>
             <div>LinkedIn: <a class="text-cyan-400 hover:underline" target="_blank" href="https://www.linkedin.com/in/saneesh-morais-581458227/">linkedin.com/in/saneesh-morais</a></div>
             <div>GitHub: <a class="text-cyan-400 hover:underline" target="_blank" href="https://github.com/saneeshmorais16">github.com/saneeshmorais16</a></div>
-            <div>Portfolio: <a class="text-cyan-400 hover:underline" target="_blank" href="https://saneeshmorais16.github.io/Saneesh_Portfolio_16/">saneeshmorais16.github.io/saneesh_portfolio</a></div>
+            <div>Portfolio: <a class="text-cyan-400 hover:underline" target="_blank" href="https://saneeshmorais16.github.io/saneesh_portfolio/">saneeshmorais16.github.io/saneesh_portfolio</a></div>
           </div>
-          <div class="flex gap-3 mt-6">
+          <div class="flex flex-wrap gap-3 mt-6">
             <a href="Saneesh_Morais_Resume.pdf" download class="px-6 py-3 rounded-lg bg-cyan-500 text-black font-semibold glow focus-ring">📄 Download CV</a>
             <a href="#press" class="px-6 py-3 rounded-lg border border-cyan-400 hover:bg-cyan-400 hover:text-black glow focus-ring">Press Kit</a>
+            <button id="printPage" class="px-6 py-3 rounded-lg border border-white/20 hover:bg-white/10 focus-ring">Print / Save PDF</button>
           </div>
         </div>
-        <div class="text-center">
+        <div class="text-center reveal">
           <img src="saneesh_qr.png" alt="QR to Links" loading="lazy" class="w-40 h-40 mx-auto rounded-lg border border-cyan-400"/>
           <div class="text-slate-400 mt-2 text-sm">Scan for all links</div>
         </div>
       </div>
     </section>
 
- 
+    <!-- CTA STRIP -->
     <section class="bg-gradient-to-r from-cyan-600/20 via-blue-600/10 to-transparent border-t border-white/10">
       <div class="max-w-7xl mx-auto px-6 py-10 text-center">
         <h3 class="text-2xl font-semibold">Ready to build something meaningful?</h3>
@@ -652,17 +704,17 @@
     </section>
   </main>
 
-
+  <!-- FOOTER -->
   <footer class="border-t border-white/10">
     <div class="max-w-7xl mx-auto px-6 py-8 text-center text-slate-400">
       © 2025 Created by <span class="text-cyan-400 font-semibold">Saneesh Morais</span> • <a class="hover:text-cyan-400" href="#">Back to top</a>
     </div>
   </footer>
 
-  
+  <!-- FLOATING BACK TO TOP -->
   <button id="toTop" class="px-3 py-2 bg-cyan-500 text-black rounded-md glow focus-ring" aria-label="Back to top">↑</button>
 
-
+  <!-- MODAL -->
   <div id="modal" class="fixed inset-0 hidden items-center justify-center bg-black/70 z-50">
     <div class="max-w-2xl w-[92%] bg-[var(--card)] rounded-xl border border-white/10 p-6 relative">
       <button class="absolute top-3 right-3 px-2 py-1 rounded bg-white/10 focus-ring" onclick="closeModal()">✕</button>
@@ -676,10 +728,34 @@
     </div>
   </div>
 
-  
-  <script>
+  <!-- Command Palette -->
+  <div id="cmdk" class="fixed inset-0 hidden items-start justify-center bg-black/60 z-[60] pt-24">
+    <div class="w-[92%] max-w-xl bg-[var(--card)] rounded-xl border border-white/10 shadow-xl">
+      <input id="cmdk-input" placeholder="Search sections or actions..."
+             class="w-full px-4 py-3 bg-transparent outline-none border-b border-white/10"
+             aria-label="Command palette" />
+      <ul id="cmdk-list" class="max-h-[50vh] overflow-auto"></ul>
+    </div>
+  </div>
 
-  
+  <!-- JSON-LD Projects -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "name":"Featured Projects",
+    "itemListElement":[
+      { "@type":"CreativeWork", "position":1, "name":"Smart Mixologist (Cocktail AI)", "description":"AI bartender recommending cocktails by mood, ingredients, or surprise.", "url":"https://github.com/saneeshmorais16" },
+      { "@type":"CreativeWork", "position":2, "name":"Casino Revenue Dashboard", "description":"Segmentation & revenue trends for a casino.", "url":"https://github.com/saneeshmorais16" },
+      { "@type":"CreativeWork", "position":3, "name":"Job Market Intelligence", "description":"Scraped 500+ UK AI/tech roles to map skills & salaries.", "url":"https://github.com/saneeshmorais16" },
+      { "@type":"CreativeWork", "position":4, "name":"AI Resume Analyzer", "description":"LLM matcher aligning CVs with job descriptions.", "url":"https://github.com/saneeshmorais16/resume-analyzer" }
+    ]
+  }
+  </script>
+
+  <!-- JS -->
+  <script>
+    // --- Mobile menu ---
     const navBtn = document.getElementById('navBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     navBtn?.addEventListener('click', ()=>{
@@ -688,7 +764,7 @@
       mobileMenu.classList.toggle('hidden');
     });
 
-
+    // --- Scroll progress + toTop ---
     const progress = document.getElementById('progress');
     window.addEventListener('scroll', ()=>{
       const h = document.documentElement;
@@ -696,8 +772,9 @@
       progress.style.width = scrolled + '%';
       document.getElementById('toTop').style.display = (h.scrollTop > 500) ? 'block' : 'none';
     });
+    document.getElementById('toTop')?.addEventListener('click', ()=> window.scrollTo({ top:0, behavior:'smooth' }));
 
-
+    // --- Copy email ---
     document.getElementById('copyEmail')?.addEventListener('click', async ()=>{
       try {
         await navigator.clipboard.writeText('saneeshmorais@gmail.com');
@@ -708,7 +785,7 @@
       } catch(e) { alert('Copy failed, email: saneeshmorais@gmail.com'); }
     });
 
- 
+    // --- Demo suggester (mock) ---
     function suggestCocktail(){
       const v = (document.getElementById('ingredient')?.value || "").toLowerCase();
       const s = document.getElementById('suggestion');
@@ -725,21 +802,35 @@
     }
     window.suggestCocktail = suggestCocktail;
 
-  
+    // --- Project filters + memory + search ---
     const filterBtns = document.querySelectorAll('[data-filter]');
     const projectCards = document.querySelectorAll('#projects article');
+    const projectSearch = document.getElementById('projectSearch');
+
+    function applyFilters(selected, query){
+      projectCards.forEach(card=>{
+        const tags = (card.getAttribute('data-tags')||'').split(' ');
+        const title = (card.getAttribute('data-title')||'').toLowerCase();
+        const inTag = selected==='all' || tags.includes(selected);
+        const inSearch = !query || title.includes(query);
+        card.style.display = (inTag && inSearch) ? '' : 'none';
+      });
+    }
+    let selectedFilter = localStorage.getItem('projFilter') || 'all';
+    applyFilters(selectedFilter, '');
+
     filterBtns.forEach(btn=>{
       btn.addEventListener('click', ()=>{
-        const f = btn.getAttribute('data-filter');
-        projectCards.forEach(card=>{
-          const tags = (card.getAttribute('data-tags')||'').split(' ');
-          const show = f==='all' || tags.includes(f);
-          card.style.display = show ? '' : 'none';
-        });
+        selectedFilter = btn.getAttribute('data-filter');
+        localStorage.setItem('projFilter', selectedFilter);
+        applyFilters(selectedFilter, (projectSearch?.value||'').toLowerCase());
       });
     });
+    projectSearch?.addEventListener('input', (e)=>{
+      applyFilters(selectedFilter, e.target.value.toLowerCase());
+    });
 
-
+    // --- Case-study modal ---
     const modal = document.getElementById('modal');
     const mTitle = document.getElementById('modalTitle');
     const mProb  = document.getElementById('modalProblem');
@@ -775,11 +866,78 @@
     function closeModal(){ modal.classList.add('hidden'); modal.classList.remove('flex'); }
     window.openModal = openModal; window.closeModal = closeModal;
 
+    // --- Reveal on scroll (IntersectionObserver) ---
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
 
-    document.getElementById('toTop')?.addEventListener('click', ()=> window.scrollTo({ top:0, behavior:'smooth' }));
+    // --- Share button (Web Share API with fallback) ---
+    document.getElementById('shareSite')?.addEventListener('click', async ()=>{
+      const data = { title: document.title, text: 'Check out Saneesh Morais — AI Engineer & Tech Founder', url: window.location.href };
+      if(navigator.share){ try{ await navigator.share(data); } catch(_){} }
+      else{
+        try{
+          await navigator.clipboard.writeText(data.url);
+          alert('Link copied to clipboard!');
+        } catch(_){ window.prompt('Copy this link:', data.url); }
+      }
+    });
 
-   
+    // --- Print / Save PDF shortcut ---
+    document.getElementById('printPage')?.addEventListener('click', ()=> window.print());
+
+    // --- Keyboard shortcuts ---
+    // g p → go to Projects, g c → go to Contact, / → focus search
+    let seq = '';
+    window.addEventListener('keydown',(e)=>{
+      if(e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA'){
+        e.preventDefault();
+        document.getElementById('projectSearch')?.focus();
+        return;
+      }
+      if(e.key.length === 1){ seq = (seq + e.key.toLowerCase()).slice(-2); }
+      if(seq === 'gp'){ document.getElementById('projects')?.scrollIntoView({behavior:'smooth'}); seq=''; }
+      if(seq === 'gc'){ document.getElementById('contact')?.scrollIntoView({behavior:'smooth'}); seq=''; }
+    });
+
+    // --- Command Palette (Ctrl/Cmd+K) ---
+    const PALETTE = [
+      {label:'Go to Projects', action:()=>document.getElementById('projects')?.scrollIntoView({behavior:'smooth'})},
+      {label:'Go to Contact',  action:()=>document.getElementById('contact')?.scrollIntoView({behavior:'smooth'})},
+      {label:'Download CV',    action:()=>window.open('Saneesh_Morais_Resume.pdf','_blank')},
+      {label:'Share site',     action:()=>document.getElementById('shareSite')?.click()},
+      {label:'Email Saneesh',  action:()=>window.location.href='mailto:saneeshmorais@gmail.com'},
+      {label:'Open GitHub',    action:()=>window.open('https://github.com/saneeshmorais16','_blank')},
+      {label:'Open LinkedIn',  action:()=>window.open('https://www.linkedin.com/in/saneesh-morais-581458227/','_blank')}
+    ];
+    const cmdk = document.getElementById('cmdk');
+    const cmdInput = document.getElementById('cmdk-input');
+    const cmdList = document.getElementById('cmdk-list');
+    const openCmd = () => { cmdk.classList.remove('hidden'); cmdk.classList.add('flex'); cmdInput.value=''; renderCmd(PALETTE); cmdInput.focus(); }
+    const closeCmd = () => { cmdk.classList.add('hidden'); cmdk.classList.remove('flex'); }
+    function renderCmd(items){ cmdList.innerHTML = items.map((it,i)=>`<li role="option" data-i="${i}" tabindex="-1">${it.label}</li>`).join(''); }
+    renderCmd(PALETTE);
+
+    document.getElementById('openCmd')?.addEventListener('click', openCmd);
+    document.addEventListener('keydown', (e)=>{
+      if((e.ctrlKey || e.metaKey) && e.key.toLowerCase()==='k'){ e.preventDefault(); openCmd(); }
+      if(e.key==='Escape' && !cmdk.classList.contains('hidden')) closeCmd();
+    });
+    cmdInput?.addEventListener('input', (e)=>{
+      const q = e.target.value.toLowerCase().trim();
+      renderCmd(PALETTE.filter(it=>it.label.toLowerCase().includes(q)));
+    });
+    cmdList.addEventListener('click', (e)=>{
+      const li = e.target.closest('li'); if(!li) return;
+      const idx = +li.dataset.i;
+      const q = cmdInput.value.toLowerCase().trim();
+      const current = (q? PALETTE.filter(it=>it.label.toLowerCase().includes(q)) : PALETTE);
+      current[idx]?.action(); closeCmd();
+    });
+    cmdk.addEventListener('click', (e)=>{ if(e.target===cmdk) closeCmd(); });
   </script>
 </body>
 </html>
-
