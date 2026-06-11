@@ -2,943 +2,1262 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Saneesh Morais | AI Engineer & Tech Founder</title>
-  <meta name="description" content="Founder-grade portfolio of Saneesh Morais — AI Engineer & Software Architect building intelligent products where data meets design."/>
-  <meta name="theme-color" content="#06b6d4"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saneesh Morais | AI Engineer & Product Builder</title>
+  <meta name="description" content="Premium portfolio of Saneesh Morais — London-based AI engineer building practical AI products, agent workflows, data systems, and automation tools." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Saneesh Morais" />
 
-  <!-- Tailwind -->
+  <meta property="og:title" content="Saneesh Morais | AI Engineer & Product Builder" />
+  <meta property="og:description" content="AI systems, product engineering, data intelligence, and automation projects by Saneesh Morais." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://dummyimage.com/1200x630/020617/e0f2fe&text=Saneesh+Morais+%7C+AI+Engineer" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Favicon (inline SVG) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
   <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
-      <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="%2306b6d4"/><stop offset="1" stop-color="%233b82f6"/></linearGradient></defs>
-      <rect width="96" height="96" rx="18" fill="%230b0f1a"/>
-      <path d="M24 64c8-2 15-7 16-16-6 4-13 3-16-5-3-8 3-15 10-17 9-2 18 3 23 11 5 8 5 19 0 27-6 9-16 14-27 14h-6z"
-            fill="url(%23g)"/>
-      <text x="52" y="62" font-family="Arial" font-size="28" fill="%23e5e7eb" font-weight="700">SM</text>
-    </svg>'/>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+    <defs>
+      <linearGradient id="a" x1="0" x2="1" y1="0" y2="1">
+        <stop stop-color="%2306b6d4"/>
+        <stop offset=".55" stop-color="%233b82f6"/>
+        <stop offset="1" stop-color="%238b5cf6"/>
+      </linearGradient>
+    </defs>
+    <rect width="96" height="96" rx="24" fill="%23020617"/>
+    <path d="M20 64c12-2 20-9 23-22 2-10 8-16 18-18 5-1 10 0 15 3-9 1-15 6-18 16-4 13-10 22-22 27-6 3-12 3-16 2v-8z" fill="url(%23a)"/>
+    <text x="50" y="62" font-family="Arial" font-size="27" fill="%23f8fafc" font-weight="800">SM</text>
+  </svg>' />
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Saneesh Morais | Final Year Student & AI engineer"/>
-  <meta property="og:description" content="Projects, case studies, roadmap, and impact, results"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:image" content="https://dummyimage.com/1200x630/0b0f1a/e5e7eb&text=Saneesh+Morais"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Saneesh Morais | Final Year Student & AI engineer"/>
-  <meta name="twitter:description" content="Projects, case studies, roadmap, and impact, results"/>
-  <meta name="twitter:image" content="https://dummyimage.com/1200x630/0b0f1a/e5e7eb&text=Saneesh+Morais"/>
-
-  <!-- Perf: preload brand font -->
-  <link rel="preload" href="https://fonts.cdnfonts.com/s/10461/CalifornianFB-Regular.woff" as="font" type="font/woff" crossorigin>
-
-  <!-- Californian FB + base -->
-  <style>
-    @font-face {
-      font-family:'CalifornianFB';
-      src:local('Californian FB'),
-          url('https://fonts.cdnfonts.com/s/10461/CalifornianFB-Regular.woff') format('woff');
-      font-weight:400; font-style:normal; font-display:swap;
-    }
-    :root{
-      --brand:#06b6d4; --brand2:#3b82f6;
-      --bg:#0b0f1a;        /* page background */
-      --fg:#e5e7eb;        /* default text */
-      --card:#0f172a;      /* card backgrounds */
-      --muted:#94a3b8;     /* muted text */
-      --ring:#06b6d4;      /* focus ring */
-    }
-
-    html,body{ height:100% }
-    body{ font-family:'CalifornianFB',serif; background:var(--bg); color:var(--fg); }
-
-    .gradient-text{ background:linear-gradient(90deg,var(--brand),var(--brand2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent }
-    .fade-in{ animation:fadeIn 1s ease-in both }
-    .slide-up{ animation:slideUp .8s ease-out both }
-    @keyframes fadeIn{ from{opacity:0} to{opacity:1} }
-    @keyframes slideUp{ from{opacity:0; transform:translateY(20px)} to{opacity:1; transform:translateY(0)} }
-    .glow:hover{ box-shadow:0 0 24px rgba(6,182,212,.45); transform:translateY(-2px) scale(1.02) }
-    .card-border{ position:relative; border:1px solid rgba(255,255,255,.08) }
-    .card-border:before{
-      content:""; position:absolute; inset:-1px; z-index:0; border-radius:.75rem;
-      background:linear-gradient(120deg,rgba(6,182,212,.35),rgba(59,130,246,.2),transparent 60%);
-      mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);
-      -webkit-mask-composite:xor; mask-composite:exclude; padding:1px; pointer-events:none;
-    }
-    .hero-title{
-      font-weight:800; line-height:1.05; font-size:clamp(2.4rem,6vw,4.6rem);
-      letter-spacing:.01em; margin:0 0 .5rem;
-      background:linear-gradient(90deg,var(--brand),var(--brand2));
-      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-      -webkit-text-stroke:.35px rgba(255,255,255,.18);
-      text-rendering:optimizeLegibility;
-    }
-    .hero-accent{ position:relative; display:inline-block }
-    .hero-accent:after{
-      content:""; position:absolute; left:0; right:0; bottom:-10px; height:3px;
-      background:linear-gradient(90deg,rgba(6,182,212,.9),rgba(59,130,246,.9));
-      border-radius:4px; filter:drop-shadow(0 0 6px rgba(59,130,246,.25));
-    }
-    .hero-quote{ margin-top:1.1rem; font-size:clamp(1rem,2.2vw,1.25rem); color:#c7d2fe; font-style:italic }
-    .chip{ display:inline-block; padding:.35rem .7rem; border:1px dashed rgba(255,255,255,.25); border-radius:999px; font-size:.9rem }
-    .badge-upcoming{ position:absolute; top:12px; right:12px; background:linear-gradient(90deg,#fde68a,#f59e0b); color:#111827; font-weight:700; font-size:.75rem; padding:.25rem .5rem; border-radius:.5rem; box-shadow:0 4px 12px rgba(245,158,11,.35) }
-    .faq-a{ display:none } .faq-q[aria-expanded="true"] + .faq-a{ display:block }
-    .focus-ring:focus-visible{ outline:3px solid var(--ring); outline-offset:2px }
-    #toTop{ position:fixed; right:1rem; bottom:1rem; display:none }
-    #progress{ position:fixed; top:0; left:0; height:3px; width:0; background:linear-gradient(90deg,var(--brand),var(--brand2)); z-index:70 }
-
-    /* in-view animation utility */
-    .reveal{ opacity:0; transform:translateY(12px); transition:opacity .6s ease, transform .6s ease }
-    .reveal.in{ opacity:1; transform:none }
-
-    /* Command palette list */
-    #cmdk-list li { padding:.75rem 1rem; cursor:pointer }
-    #cmdk-list li:hover, #cmdk-list li[aria-selected="true"] { background:rgba(6,182,212,.12) }
-
-    /* Print-ready CV export */
-    @media print{
-      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      header, #progress, #toTop, video, .bg-black\/20, .bg-black\/10 { display:none !important; }
-      a::after { content:" (" attr(href) ")"; font-size:0.85em; color:#64748b; }
-      section { break-inside: avoid; }
-      body { background: #fff; color:#111827; }
-    }
-
-    /* reduced motion: pause video */
-    @media (prefers-reduced-motion: reduce){
-      video[autoplay]{ animation: none; transition: none; }
-    }
-  </style>
-
-  <!-- Schema.org (Person) -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Saneesh Morais",
-    "description":"AI Engineer & Software Architect in London, building intelligent products.",
-    "url":"https://saneeshmorais16.github.io/saneesh_portfolio/",
-    "jobTitle":"AI Engineer & Tech Founder",
-    "email":"mailto:saneeshmorais@gmail.com",
-    "sameAs":[
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Saneesh Morais",
+    "jobTitle": "AI Engineer & Product Builder",
+    "email": "mailto:saneeshmorais@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "London",
+      "addressCountry": "GB"
+    },
+    "url": "https://saneeshmorais16.github.io/Saneesh_Portfolio_16/",
+    "sameAs": [
       "https://github.com/saneeshmorais16",
       "https://www.linkedin.com/in/saneesh-morais-581458227/"
-    ]
+    ],
+    "knowsAbout": ["Artificial Intelligence", "FastAPI", "Python", "SQL", "RAG", "LLM workflows", "Data Analytics", "Software Engineering"]
   }
   </script>
+
+  <style>
+    :root{
+      --bg:#020617;
+      --panel:#07111f;
+      --panel-2:#0b1728;
+      --line:rgba(148,163,184,.18);
+      --line-strong:rgba(125,211,252,.34);
+      --text:#e5eefb;
+      --muted:#94a3b8;
+      --soft:#cbd5e1;
+      --brand:#06b6d4;
+      --brand2:#3b82f6;
+      --brand3:#8b5cf6;
+      --gold:#f5d78e;
+      --danger:#fb7185;
+      --ok:#34d399;
+      --shadow:0 24px 80px rgba(2,6,23,.56);
+      --radius:28px;
+    }
+
+    *{box-sizing:border-box}
+    html{background:var(--bg)}
+    body{
+      margin:0;
+      min-height:100%;
+      color:var(--text);
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:
+        radial-gradient(circle at 15% 3%, rgba(59,130,246,.22), transparent 32rem),
+        radial-gradient(circle at 85% 8%, rgba(139,92,246,.20), transparent 28rem),
+        radial-gradient(circle at 50% 100%, rgba(6,182,212,.13), transparent 34rem),
+        linear-gradient(180deg,#020617 0%, #03101f 46%, #020617 100%);
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:-3;
+      opacity:.34;
+      background-image:
+        linear-gradient(rgba(148,163,184,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148,163,184,.045) 1px, transparent 1px);
+      background-size:54px 54px;
+      mask-image:linear-gradient(to bottom, #000, transparent 82%);
+    }
+
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:-2;
+      opacity:.08;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E");
+    }
+
+    ::selection{background:rgba(6,182,212,.32); color:white}
+    a{color:inherit}
+    button,input,textarea{font:inherit}
+    .font-display{font-family:"Instrument Serif", Georgia, serif}
+    .container-x{width:min(1180px,calc(100% - 40px)); margin-inline:auto}
+
+    .gradient-text{
+      background:linear-gradient(115deg,#e0f2fe 0%,#67e8f9 26%,#60a5fa 58%,#c4b5fd 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .gold-text{
+      background:linear-gradient(110deg,#fff7d6 0%,#f5d78e 45%,#f8fafc 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .premium-card{
+      position:relative;
+      overflow:hidden;
+      background:
+        linear-gradient(145deg,rgba(15,23,42,.92),rgba(2,6,23,.82)),
+        radial-gradient(circle at 20% 0%, rgba(6,182,212,.16), transparent 20rem);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .premium-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.12), transparent 34%),
+        radial-gradient(circle at var(--mx, 50%) var(--my, 0%), rgba(56,189,248,.18), transparent 18rem);
+      opacity:.9;
+    }
+
+    .premium-card > *{position:relative; z-index:1}
+
+    .hairline{
+      border:1px solid var(--line);
+      background:rgba(15,23,42,.52);
+      backdrop-filter:blur(18px);
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+      padding:.56rem .86rem;
+      border:1px solid rgba(148,163,184,.22);
+      border-radius:999px;
+      color:#cbd5e1;
+      background:rgba(15,23,42,.58);
+      box-shadow:inset 0 1px rgba(255,255,255,.05);
+      white-space:nowrap;
+    }
+
+    .pill-dot{
+      width:.48rem;
+      height:.48rem;
+      border-radius:99px;
+      background:var(--ok);
+      box-shadow:0 0 0 6px rgba(52,211,153,.1);
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.65rem;
+      border-radius:999px;
+      padding:.92rem 1.18rem;
+      font-weight:800;
+      letter-spacing:-.01em;
+      transition:transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
+      will-change:transform;
+    }
+
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{
+      color:#020617;
+      background:linear-gradient(135deg,#67e8f9,#60a5fa 55%,#c4b5fd);
+      box-shadow:0 16px 50px rgba(6,182,212,.22);
+    }
+    .btn-ghost{
+      color:#e2e8f0;
+      border:1px solid rgba(148,163,184,.24);
+      background:rgba(15,23,42,.44);
+    }
+    .btn-ghost:hover{border-color:rgba(125,211,252,.54); background:rgba(15,23,42,.75)}
+    .focus-ring:focus-visible{outline:3px solid rgba(56,189,248,.78); outline-offset:4px}
+
+    .nav-link{
+      position:relative;
+      color:#cbd5e1;
+      font-size:.92rem;
+      transition:color .2s ease;
+    }
+    .nav-link:hover{color:white}
+    .nav-link::after{
+      content:"";
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:-9px;
+      height:2px;
+      transform:scaleX(0);
+      transform-origin:left;
+      background:linear-gradient(90deg,var(--brand),var(--brand3));
+      transition:transform .2s ease;
+    }
+    .nav-link:hover::after{transform:scaleX(1)}
+
+    #progress{
+      position:fixed;
+      top:0;
+      left:0;
+      height:3px;
+      width:0%;
+      z-index:100;
+      background:linear-gradient(90deg,#06b6d4,#3b82f6,#8b5cf6);
+      box-shadow:0 0 18px rgba(56,189,248,.45);
+    }
+
+    .orb{
+      position:absolute;
+      border-radius:999px;
+      filter:blur(12px);
+      opacity:.58;
+      pointer-events:none;
+      animation:floaty 9s ease-in-out infinite;
+    }
+    .orb.one{width:280px;height:280px;background:rgba(6,182,212,.18);top:14%;left:-6%}
+    .orb.two{width:260px;height:260px;background:rgba(139,92,246,.15);top:16%;right:-4%;animation-delay:-2s}
+    .orb.three{width:200px;height:200px;background:rgba(59,130,246,.14);bottom:8%;left:38%;animation-delay:-4s}
+    @keyframes floaty{
+      0%,100%{transform:translate3d(0,0,0) scale(1)}
+      50%{transform:translate3d(18px,-24px,0) scale(1.06)}
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:48px;
+      align-items:center;
+      min-height:calc(100svh - 84px);
+      padding:88px 0 72px;
+    }
+
+    .hero-title{
+      font-size:clamp(3rem,7vw,6.75rem);
+      line-height:.91;
+      letter-spacing:-.07em;
+      font-weight:900;
+    }
+
+    .hero-kicker{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.7rem;
+      align-items:center;
+      margin-bottom:1.2rem;
+    }
+
+    .lead{
+      color:#c7d2fe;
+      font-size:clamp(1.05rem,1.7vw,1.28rem);
+      line-height:1.8;
+      max-width:720px;
+    }
+
+    .device{
+      transform-style:preserve-3d;
+      perspective:1600px;
+    }
+
+    .terminal{
+      min-height:620px;
+      border-radius:34px;
+      background:
+        linear-gradient(155deg, rgba(15,23,42,.92),rgba(2,6,23,.96)),
+        radial-gradient(circle at top left, rgba(6,182,212,.14), transparent 22rem);
+      border:1px solid rgba(148,163,184,.24);
+      box-shadow:
+        0 38px 100px rgba(2,6,23,.76),
+        inset 0 1px rgba(255,255,255,.08);
+      overflow:hidden;
+      transform:rotateX(4deg) rotateY(-6deg);
+    }
+
+    .terminal-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 20px;
+      border-bottom:1px solid rgba(148,163,184,.18);
+      background:rgba(2,6,23,.55);
+    }
+    .traffic{display:flex;gap:8px}
+    .traffic span{width:11px;height:11px;border-radius:50%;display:block;background:#334155}
+    .traffic span:nth-child(1){background:#fb7185}
+    .traffic span:nth-child(2){background:#fbbf24}
+    .traffic span:nth-child(3){background:#34d399}
+
+    .dash-card{
+      border:1px solid rgba(148,163,184,.16);
+      border-radius:22px;
+      background:rgba(15,23,42,.58);
+      padding:18px;
+      box-shadow:inset 0 1px rgba(255,255,255,.04);
+    }
+
+    .spark{
+      height:82px;
+      border-radius:16px;
+      position:relative;
+      overflow:hidden;
+      background:
+        linear-gradient(180deg,rgba(59,130,246,.16),rgba(6,182,212,.03)),
+        linear-gradient(90deg, rgba(148,163,184,.08) 1px, transparent 1px),
+        linear-gradient(rgba(148,163,184,.08) 1px, transparent 1px);
+      background-size:auto, 24px 24px, 24px 24px;
+    }
+    .spark svg{position:absolute;inset:0;width:100%;height:100%}
+    .glow-line{filter:drop-shadow(0 0 10px rgba(34,211,238,.7))}
+
+    section{position:relative}
+    .section-pad{padding:98px 0}
+    .section-title{
+      font-size:clamp(2.1rem,4vw,4.5rem);
+      line-height:1;
+      letter-spacing:-.055em;
+      font-weight:900;
+    }
+    .section-subtitle{
+      max-width:780px;
+      color:#94a3b8;
+      line-height:1.8;
+      font-size:1.05rem;
+    }
+
+    .stat{
+      border-left:1px solid rgba(125,211,252,.28);
+      padding-left:20px;
+    }
+    .stat strong{
+      display:block;
+      font-size:clamp(2rem,4vw,3.6rem);
+      line-height:1;
+      letter-spacing:-.05em;
+    }
+    .stat span{color:#94a3b8;font-size:.95rem}
+
+    .project-card{
+      position:relative;
+      min-height:360px;
+      border-radius:30px;
+      border:1px solid rgba(148,163,184,.18);
+      background:
+        radial-gradient(circle at 14% 4%, rgba(6,182,212,.15), transparent 16rem),
+        linear-gradient(145deg, rgba(15,23,42,.86), rgba(2,6,23,.92));
+      overflow:hidden;
+      padding:26px;
+      transition:transform .24s ease, border-color .24s ease, box-shadow .24s ease;
+    }
+    .project-card:hover{
+      transform:translateY(-8px);
+      border-color:rgba(125,211,252,.46);
+      box-shadow:0 30px 90px rgba(2,6,23,.7);
+    }
+    .project-card::after{
+      content:"";
+      position:absolute;
+      inset:auto -20% -35% -20%;
+      height:200px;
+      background:radial-gradient(circle, rgba(56,189,248,.16), transparent 60%);
+      pointer-events:none;
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      padding:.4rem .62rem;
+      font-size:.76rem;
+      font-weight:700;
+      border-radius:999px;
+      background:rgba(6,182,212,.1);
+      color:#a5f3fc;
+      border:1px solid rgba(103,232,249,.16);
+    }
+
+    .timeline{
+      position:relative;
+      margin-top:42px;
+    }
+    .timeline::before{
+      content:"";
+      position:absolute;
+      left:20px;
+      top:0;
+      bottom:0;
+      width:1px;
+      background:linear-gradient(to bottom, transparent, rgba(56,189,248,.58), transparent);
+    }
+    .timeline-item{
+      position:relative;
+      padding-left:66px;
+      padding-bottom:36px;
+    }
+    .timeline-item::before{
+      content:"";
+      position:absolute;
+      left:10px;
+      top:5px;
+      width:20px;
+      height:20px;
+      border-radius:99px;
+      background:#020617;
+      border:1px solid rgba(125,211,252,.72);
+      box-shadow:0 0 0 8px rgba(6,182,212,.08);
+    }
+
+    .skill-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+    }
+    .skill{
+      border:1px solid rgba(148,163,184,.16);
+      background:rgba(15,23,42,.62);
+      border-radius:18px;
+      padding:15px 14px;
+      color:#cbd5e1;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      align-items:center;
+      min-height:56px;
+    }
+    .skill small{color:#64748b;font-weight:800;text-transform:uppercase;font-size:.64rem;letter-spacing:.08em}
+
+    .quote{
+      font-family:"Instrument Serif", Georgia, serif;
+      font-size:clamp(1.8rem,3.2vw,3.3rem);
+      line-height:1.12;
+      letter-spacing:-.03em;
+    }
+
+    .marquee{
+      overflow:hidden;
+      white-space:nowrap;
+      border-block:1px solid rgba(148,163,184,.14);
+      background:rgba(2,6,23,.38);
+    }
+    .marquee-track{
+      display:inline-flex;
+      gap:32px;
+      padding:18px 0;
+      animation:marquee 32s linear infinite;
+    }
+    .marquee span{
+      color:#94a3b8;
+      text-transform:uppercase;
+      font-weight:900;
+      letter-spacing:.12em;
+      font-size:.76rem;
+    }
+    @keyframes marquee{to{transform:translateX(-50%)}}
+
+    .command{
+      position:fixed;
+      inset:0;
+      z-index:90;
+      display:none;
+      align-items:flex-start;
+      justify-content:center;
+      padding-top:90px;
+      background:rgba(2,6,23,.68);
+      backdrop-filter:blur(14px);
+    }
+    .command.open{display:flex}
+    .command-panel{
+      width:min(620px,calc(100% - 32px));
+      border:1px solid rgba(148,163,184,.2);
+      background:rgba(7,17,31,.94);
+      box-shadow:0 30px 100px rgba(0,0,0,.5);
+      border-radius:26px;
+      overflow:hidden;
+    }
+    .command input{
+      width:100%;
+      background:transparent;
+      border:0;
+      outline:0;
+      color:white;
+      padding:20px 22px;
+      border-bottom:1px solid rgba(148,163,184,.15);
+    }
+    .command li{
+      padding:15px 22px;
+      cursor:pointer;
+      color:#cbd5e1;
+      display:flex;
+      justify-content:space-between;
+    }
+    .command li:hover{background:rgba(56,189,248,.1); color:white}
+
+    .reveal{
+      opacity:0;
+      transform:translateY(22px);
+      transition:opacity .7s ease, transform .7s ease;
+    }
+    .reveal.in{opacity:1; transform:none}
+
+    .mobile-menu{
+      display:none;
+      border-top:1px solid rgba(148,163,184,.15);
+      background:rgba(2,6,23,.95);
+    }
+
+    #toTop{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      z-index:80;
+      display:none;
+      width:46px;
+      height:46px;
+      border-radius:999px;
+      border:1px solid rgba(125,211,252,.28);
+      background:rgba(15,23,42,.78);
+      backdrop-filter:blur(12px);
+      color:white;
+      box-shadow:0 14px 50px rgba(2,6,23,.5);
+    }
+
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr; padding-top:70px}
+      .terminal{min-height:auto; transform:none}
+      .skill-grid{grid-template-columns:repeat(2,1fr)}
+      .desktop-nav{display:none}
+      .mobile-menu.open{display:block}
+    }
+    @media (max-width: 640px){
+      .container-x{width:min(100% - 28px,1180px)}
+      .hero-title{font-size:clamp(3.1rem,16vw,4.4rem)}
+      .section-pad{padding:74px 0}
+      .skill-grid{grid-template-columns:1fr}
+      .btn{width:100%}
+      .hero-actions{width:100%}
+      .stat{border-left:0;border-top:1px solid rgba(125,211,252,.24);padding:20px 0 0}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
+    }
+
+    @media print{
+      header,#progress,#toTop,.command,.marquee,.no-print{display:none!important}
+      body{background:white;color:#0f172a}
+      .premium-card,.project-card,.hairline{box-shadow:none;background:white;border-color:#cbd5e1}
+      a::after{content:" (" attr(href) ")";font-size:.8em;color:#64748b}
+      section{break-inside:avoid}
+    }
+  </style>
 </head>
 
-<body class="selection:bg-cyan-600/40">
-  <a href="#main" class="sr-only focus:not-sr-only focus:ring-2 focus:ring-cyan-400 focus:bg-black text-white px-3 py-2 absolute left-2 top-2 rounded">Skip to content</a>
+<body>
+  <a href="#main" class="sr-only focus:not-sr-only focus-ring fixed left-4 top-4 z-[120] rounded-full bg-slate-950 px-4 py-2 text-white">Skip to content</a>
   <div id="progress"></div>
 
-  <!-- NAV -->
-  <header class="sticky top-0 z-50 bg-black/70 backdrop-blur-md border-b border-white/10">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <!-- BRAND with inline logo SVG -->
-      <a href="#" class="flex items-center gap-2" aria-label="Home">
-        <svg width="28" height="28" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs><linearGradient id="g2" x1="0" x2="1"><stop stop-color="#06b6d4"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs>
-          <rect width="96" height="96" rx="18" fill="#0b0f1a"/>
-          <path d="M24 64c8-2 15-7 16-16-6 4-13 3-16-5-3-8 3-15 10-17 9-2 18 3 23 11 5 8 5 19 0 27-6 9-16 14-27 14h-6z" fill="url(#g2)"/>
-          <text x="52" y="62" font-family="Arial" font-size="28" fill="#e5e7eb" font-weight="700">SM</text>
-        </svg>
-        <span class="text-xl md:text-2xl font-bold tracking-wide gradient-text">Saneesh Morais</span>
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/62 backdrop-blur-2xl">
+    <nav class="container-x flex items-center justify-between py-4">
+      <a href="#" class="flex items-center gap-3 focus-ring rounded-full" aria-label="Saneesh Morais home">
+        <span class="grid h-11 w-11 place-items-center rounded-2xl border border-cyan-300/25 bg-slate-950 shadow-lg shadow-cyan-950/30">
+          <svg width="30" height="30" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="logoGradient" x1="12" y1="15" x2="82" y2="82">
+                <stop stop-color="#67e8f9"/>
+                <stop offset=".55" stop-color="#60a5fa"/>
+                <stop offset="1" stop-color="#c4b5fd"/>
+              </linearGradient>
+            </defs>
+            <path d="M20 64c12-2 20-9 23-22 2-10 8-16 18-18 5-1 10 0 15 3-9 1-15 6-18 16-4 13-10 22-22 27-6 3-12 3-16 2v-8z" fill="url(#logoGradient)"/>
+            <text x="48" y="63" text-anchor="middle" font-family="Inter,Arial" font-size="26" fill="#f8fafc" font-weight="900">SM</text>
+          </svg>
+        </span>
+        <span>
+          <span class="block text-sm font-black tracking-tight text-white">Saneesh Morais</span>
+          <span class="block text-[11px] font-semibold uppercase tracking-[.22em] text-slate-500">AI Engineer</span>
+        </span>
       </a>
 
-      <ul class="hidden md:flex items-center gap-6">
-        <li><a class="hover:text-cyan-400" href="#projects">Projects</a></li>
-        <li><a class="hover:text-cyan-400" href="#build">What I Build</a></li>
-        <li><a class="hover:text-cyan-400" href="#demo">Demo</a></li>
-        <li><a class="hover:text-cyan-400" href="#metrics">Impact</a></li>
-        <li><a class="hover:text-cyan-400" href="#roadmap">Roadmap</a></li>
-        <li><a class="hover:text-cyan-400" href="#press">Press</a></li>
-        <li><a class="hover:text-cyan-400" href="#fav-questions">Interview Q/A</a></li>
-        <li><a class="hover:text-cyan-400" href="#contact">Contact</a></li>
+      <ul class="desktop-nav flex items-center gap-7">
+        <li><a class="nav-link" href="#work">Work</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#stack">Stack</a></li>
+        <li><a class="nav-link" href="#experience">Experience</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
+
       <div class="flex items-center gap-3">
-        <button id="openCmd" title="Command Palette (Ctrl/⌘+K)" class="hidden md:inline-block px-3 py-2 rounded-lg border border-white/20 hover:bg-white/10 focus-ring">Quick Nav</button>
-        <a href="Saneesh_Morais_Resume.pdf" download class="hidden md:inline-block px-4 py-2 rounded-lg bg-cyan-500 text-black font-semibold glow focus-ring">Download Résumé</a>
-        <button id="navBtn" class="md:hidden px-3 py-2 border border-white/20 rounded focus-ring" aria-haspopup="true" aria-controls="mobileMenu" aria-expanded="false">Menu</button>
+        <button id="openCommand" class="hidden rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-bold text-slate-300 transition hover:bg-white/10 md:inline-flex focus-ring">⌘K</button>
+        <a class="hidden rounded-full bg-white px-4 py-2 text-sm font-black text-slate-950 transition hover:translate-y-[-1px] md:inline-flex focus-ring" href="Saneesh_Morais_Resume.pdf" download>Download CV</a>
+        <button id="menuBtn" class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-bold text-slate-200 md:hidden focus-ring" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
       </div>
     </nav>
-    <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 border-b border-white/10 bg-black/80 backdrop-blur-md">
-      <ul class="grid gap-3 pt-2">
-        <li><a class="hover:text-cyan-400" href="#projects">Projects</a></li>
-        <li><a class="hover:text-cyan-400" href="#build">What I Build</a></li>
-        <li><a class="hover:text-cyan-400" href="#demo">Demo</a></li>
-        <li><a class="hover:text-cyan-400" href="#metrics">Impact</a></li>
-        <li><a class="hover:text-cyan-400" href="#roadmap">Roadmap</a></li>
-        <li><a class="hover:text-cyan-400" href="#press">Press</a></li>
-        <li><a class="hover:text-cyan-400" href="#fav-questions">Interview Qs</a></li>
-        <li><a class="hover:text-cyan-400" href="#contact">Contact</a></li>
-      </ul>
+
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="container-x grid gap-4 py-5">
+        <a class="text-slate-300" href="#work">Work</a>
+        <a class="text-slate-300" href="#projects">Projects</a>
+        <a class="text-slate-300" href="#stack">Stack</a>
+        <a class="text-slate-300" href="#experience">Experience</a>
+        <a class="text-slate-300" href="#contact">Contact</a>
+      </div>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="relative h-[92vh] flex items-center justify-center text-center overflow-hidden">
-    <video autoplay muted loop playsinline preload="metadata" class="absolute inset-0 w-full h-full object-cover opacity-40" poster="">
-      <source src="hero-bg.mp4#t=0.1" type="video/mp4"/>
-    </video>
-    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-transparent"></div>
+  <main id="main">
+    <section class="relative overflow-hidden">
+      <div class="orb one"></div>
+      <div class="orb two"></div>
+      <div class="orb three"></div>
 
-    <div class="relative z-10 px-6 max-w-5xl mx-auto">
-      <h1 class="hero-title">
-        Building Intelligent Products<br class="hidden md:block"/>
-        <span class="hero-accent">Where Data Meets Design</span>
-      </h1>
-      <p class="hero-quote">“known is drop ocean is huge.”</p>
-      <p class="mt-5 text-lg md:text-xl text-gray-200">Student, Aspiring AI Engineer & Software Architect • London • <span class="text-cyan-400">Designed Smart Mixologist</span></p>
-      <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
-        <a href="#projects" class="px-6 py-3 rounded-lg bg-cyan-500 text-black font-semibold glow focus-ring">Explore Projects</a>
-        <a href="https://saneeshmorais16.github.io/saneesh_portfolio/" target="_blank" class="px-6 py-3 rounded-lg border border-cyan-400 hover:bg-cyan-400 hover:text-black glow focus-ring">Full Portfolio</a>
-        <span class="chip">BSc Computing with AI</span>
-        <span class="chip">NLP & LLMs</span>
-        <span class="chip">Product Engineering</span>
+      <div class="container-x hero-grid">
+        <div class="reveal">
+          <div class="hero-kicker">
+            <span class="pill"><span class="pill-dot"></span> London-based • Open to AI, data & software roles</span>
+            <span class="pill">Recently completed BSc Computing with AI</span>
+          </div>
+
+          <h1 class="hero-title gradient-text">Building AI systems that feel useful, sharp and real.</h1>
+
+          <p class="lead mt-7">
+            I build practical AI products across workflow automation, agent security, data intelligence and LLM-powered interfaces.
+            My work is focused on one thing: turning messy problems into simple tools people can actually use.
+          </p>
+
+          <div class="hero-actions mt-9 flex flex-wrap gap-3">
+            <a href="#projects" class="btn btn-primary focus-ring">View Selected Work <span aria-hidden="true">→</span></a>
+            <a href="mailto:saneeshmorais@gmail.com" class="btn btn-ghost focus-ring">Email Me</a>
+            <a href="https://github.com/saneeshmorais16" target="_blank" rel="noopener" class="btn btn-ghost focus-ring">GitHub</a>
+          </div>
+
+          <div class="mt-10 grid grid-cols-2 gap-6 md:grid-cols-4">
+            <div class="stat">
+              <strong class="gold-text">72→85</strong>
+              <span>data quality improvement in internship workflow</span>
+            </div>
+            <div class="stat">
+              <strong class="gradient-text">30%</strong>
+              <span>reporting time reduction through automation</span>
+            </div>
+            <div class="stat">
+              <strong class="gradient-text">500+</strong>
+              <span>job posts analysed for market intelligence</span>
+            </div>
+            <div class="stat">
+              <strong class="gradient-text">10%</strong>
+              <span>dashboard efficiency improvement through clearer outputs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="device reveal">
+          <div class="terminal" aria-label="Portfolio product preview">
+            <div class="terminal-top">
+              <div class="traffic"><span></span><span></span><span></span></div>
+              <div class="text-xs font-black uppercase tracking-[.22em] text-slate-500">AI Product Console</div>
+            </div>
+
+            <div class="space-y-4 p-5">
+              <div class="dash-card">
+                <div class="mb-4 flex items-start justify-between gap-4">
+                  <div>
+                    <div class="text-xs font-black uppercase tracking-[.18em] text-cyan-300">Current focus</div>
+                    <h2 class="mt-1 text-2xl font-black tracking-tight">AI Impact OS</h2>
+                  </div>
+                  <span class="tag">FastAPI</span>
+                </div>
+                <p class="text-sm leading-6 text-slate-400">A workflow intelligence system for capturing AI ideas, scoring business value, tracking ownership and measuring impact.</p>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div class="dash-card">
+                  <div class="text-xs font-bold uppercase tracking-widest text-slate-500">Opportunity score</div>
+                  <div class="mt-3 text-4xl font-black text-cyan-300">92</div>
+                  <div class="mt-2 h-2 overflow-hidden rounded-full bg-slate-800">
+                    <div class="h-full w-[92%] rounded-full bg-gradient-to-r from-cyan-300 to-blue-500"></div>
+                  </div>
+                </div>
+                <div class="dash-card">
+                  <div class="text-xs font-bold uppercase tracking-widest text-slate-500">Status</div>
+                  <div class="mt-4 inline-flex rounded-full border border-emerald-300/20 bg-emerald-400/10 px-3 py-1 text-sm font-bold text-emerald-300">Prototype built</div>
+                  <p class="mt-4 text-xs leading-5 text-slate-500">Evidence, owner, approval and measurement fields included.</p>
+                </div>
+              </div>
+
+              <div class="dash-card">
+                <div class="mb-3 flex items-center justify-between">
+                  <span class="text-sm font-bold text-slate-300">Impact trend</span>
+                  <span class="text-xs font-black text-cyan-300">LIVE DEMO READY</span>
+                </div>
+                <div class="spark">
+                  <svg viewBox="0 0 420 120" preserveAspectRatio="none">
+                    <path d="M0 88 C42 84 56 54 92 60 C134 66 136 96 178 82 C220 68 222 36 266 44 C310 52 310 72 350 52 C386 34 394 28 420 26" fill="none" stroke="rgba(103,232,249,.92)" stroke-width="5" class="glow-line"/>
+                    <path d="M0 88 C42 84 56 54 92 60 C134 66 136 96 178 82 C220 68 222 36 266 44 C310 52 310 72 350 52 C386 34 394 28 420 26 L420 120 L0 120 Z" fill="rgba(34,211,238,.13)"/>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="grid gap-3">
+                <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[.03] px-4 py-3">
+                  <span class="text-sm text-slate-300">Agentic AI Security Lab</span>
+                  <span class="text-xs font-black text-purple-300">risk scoring</span>
+                </div>
+                <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[.03] px-4 py-3">
+                  <span class="text-sm text-slate-300">RAG Pipeline from Scratch</span>
+                  <span class="text-xs font-black text-cyan-300">retrieval</span>
+                </div>
+                <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[.03] px-4 py-3">
+                  <span class="text-sm text-slate-300">Smart Mixologist AI</span>
+                  <span class="text-xs font-black text-amber-200">product UX</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>Python</span><span>FastAPI</span><span>SQL</span><span>JavaScript</span><span>LLM Workflows</span><span>RAG</span><span>Data Dashboards</span><span>Agent Security</span><span>Product Engineering</span><span>GitHub</span>
+        <span>Python</span><span>FastAPI</span><span>SQL</span><span>JavaScript</span><span>LLM Workflows</span><span>RAG</span><span>Data Dashboards</span><span>Agent Security</span><span>Product Engineering</span><span>GitHub</span>
       </div>
     </div>
-  </section>
 
-  <main id="main">
-    <!-- ABOUT -->
-    <section id="about" class="max-w-7xl mx-auto px-6 py-16">
-      <div class="grid md:grid-cols-3 gap-10 items-start">
-        <div class="md:col-span-2 reveal">
-          <h2 class="text-3xl font-bold mb-4">About Me</h2>
-          <p class="text-slate-300 leading-relaxed">
-            I’m a BSc Computing with AI Technology student in London, focused on
-            <span class="text-cyan-400">NLP, LLMs, data analytics, and product engineering</span>.
-            I build pragmatic AI prototypes that evolve into scalable products. Experience includes internships at
-            <a class="text-cyan-400 hover:underline" href="https://savant-technologies.com" target="_blank" rel="noopener">Savant Technologies</a> and
-            <a class="text-cyan-400 hover:underline" href="https://smallcap.ai" target="_blank" rel="noopener">Smallcap.ai</a>. I also thrive in high-pressure, customer-centric environments at
-            <a class="text-cyan-400 hover:underline" href="https://hippodromecasino.com" target="_blank" rel="noopener">Hippodrome Casino</a>.
+    <section id="work" class="section-pad">
+      <div class="container-x">
+        <div class="grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:items-end">
+          <div class="reveal">
+            <div class="pill mb-5">What I build</div>
+            <h2 class="section-title">AI systems with business logic, not just demos.</h2>
+          </div>
+          <p class="section-subtitle reveal">
+            My strongest projects combine backend APIs, data pipelines, simple UX, and measurable outcomes.
+            I am most interested in roles where I can build, test, improve and ship useful internal or customer-facing AI tools.
           </p>
         </div>
-        <div class="space-y-3 reveal">
-          <div class="text-sm text-slate-400">Primary Links</div>
-          <button id="copyEmail" class="block text-left text-cyan-400 hover:underline focus-ring">Copy Email: saneeshmorais@gmail.com</button>
-          <a class="block hover:text-cyan-400" target="_blank" href="https://www.linkedin.com/in/saneesh-morais-581458227/">LinkedIn</a>
-          <a class="block hover:text-cyan-400" target="_blank" href="https://github.com/saneeshmorais16">GitHub</a>
-          <a class="block hover:text-cyan-400" target="_blank" href="https://saneeshmorais16.github.io/saneesh_portfolio/">Portfolio</a>
-          <a class="block hover:text-cyan-400" download href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3AMorais%3B%20Saneesh%0AFN%3ASaneesh%20Morais%0AEMAIL%3BTYPE%3DINTERNET%3A%20saneeshmorais%40gmail.com%0AURL%3Ahttps%3A%2F%2Fgithub.com%2Fsaneeshmorais16%0AEND%3AVCARD">Download vCard</a>
+
+        <div class="mt-12 grid gap-5 md:grid-cols-3">
+          <article class="premium-card reveal p-7">
+            <div class="mb-5 inline-grid h-12 w-12 place-items-center rounded-2xl bg-cyan-300/10 text-2xl">⚙️</div>
+            <h3 class="text-2xl font-black tracking-tight">AI workflow automation</h3>
+            <p class="mt-4 leading-7 text-slate-400">Capture messy workflows, identify automation opportunities, score value and turn repeated manual work into structured systems.</p>
+            <div class="mt-6 flex flex-wrap gap-2"><span class="tag">FastAPI</span><span class="tag">SQLite</span><span class="tag">Gemini-ready</span></div>
+          </article>
+
+          <article class="premium-card reveal p-7">
+            <div class="mb-5 inline-grid h-12 w-12 place-items-center rounded-2xl bg-purple-300/10 text-2xl">🛡️</div>
+            <h3 class="text-2xl font-black tracking-tight">Agent security & governance</h3>
+            <p class="mt-4 leading-7 text-slate-400">Simulate agent actions, classify risk, detect prompt attacks, create approval records and generate audit trails for AI system control.</p>
+            <div class="mt-6 flex flex-wrap gap-2"><span class="tag">Risk scoring</span><span class="tag">Audit logs</span><span class="tag">Policies</span></div>
+          </article>
+
+          <article class="premium-card reveal p-7">
+            <div class="mb-5 inline-grid h-12 w-12 place-items-center rounded-2xl bg-blue-300/10 text-2xl">📊</div>
+            <h3 class="text-2xl font-black tracking-tight">Data products & dashboards</h3>
+            <p class="mt-4 leading-7 text-slate-400">Clean data, structure reporting, build dashboards and extract practical signals from jobs, customers, operations and model outputs.</p>
+            <div class="mt-6 flex flex-wrap gap-2"><span class="tag">Pandas</span><span class="tag">SQL</span><span class="tag">Power BI</span></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- WHAT I BUILD -->
-    <section id="build" class="bg-black/10 border-y border-white/10">
-      <div class="max-w-7xl mx-auto px-6 py-16">
-        <h2 class="text-3xl font-bold mb-10">What I Build</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
-            <h3 class="text-xl font-semibold mb-2">AI Prototypes → Products</h3>
-            <p class="text-slate-300">From quick LLM demos to robust APIs with evaluation, guardrails, and observability.</p>
-            <p class="text-sm text-slate-400 mt-2">FastAPI • RAG • Embeddings • Eval</p>
+    <section id="projects" class="section-pad border-y border-white/10 bg-white/[.015]">
+      <div class="container-x">
+        <div class="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div class="reveal">
+            <div class="pill mb-5">Selected portfolio</div>
+            <h2 class="section-title">Projects that show how I think and build.</h2>
           </div>
-          <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
-            <h3 class="text-xl font-semibold mb-2">Data & Analytics</h3>
-            <p class="text-slate-300">Scraping, pipelines, and dashboards delivering actionable insights and ROI.</p>
-            <p class="text-sm text-slate-400 mt-2">Python • SQL • Pandas • Streamlit</p>
+          <div class="reveal flex flex-wrap gap-2">
+            <button class="filter-btn pill focus-ring" data-filter="all">All</button>
+            <button class="filter-btn pill focus-ring" data-filter="ai">AI</button>
+            <button class="filter-btn pill focus-ring" data-filter="data">Data</button>
+            <button class="filter-btn pill focus-ring" data-filter="web">Web</button>
           </div>
-          <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
-            <h3 class="text-xl font-semibold mb-2">Modern Web Apps</h3>
-            <p class="text-slate-300">Clean, responsive, founder-friendly UIs with strong UX and performance.</p>
-            <p class="text-sm text-slate-400 mt-2">Next.js • Tailwind • Supabase</p>
-          </div>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-3">
+          <article class="project-card reveal lg:col-span-2" data-tags="ai data web">
+            <div class="mb-5 flex flex-wrap gap-2">
+              <span class="tag">Featured</span><span class="tag">FastAPI</span><span class="tag">AI automation</span>
+            </div>
+            <h3 class="text-4xl font-black tracking-tight">AI Impact OS</h3>
+            <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-400">
+              Internal AI operating system for logging workflow pain points, scoring automation opportunities, tracking owners and measuring time saved.
+            </p>
+            <div class="mt-8 grid gap-4 md:grid-cols-3">
+              <div class="rounded-2xl border border-white/10 bg-white/[.035] p-4">
+                <div class="text-xs font-black uppercase tracking-widest text-slate-500">Backend</div>
+                <div class="mt-2 font-bold text-white">FastAPI + SQLite</div>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/[.035] p-4">
+                <div class="text-xs font-black uppercase tracking-widest text-slate-500">Workflow</div>
+                <div class="mt-2 font-bold text-white">Scoring + audit trail</div>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/[.035] p-4">
+                <div class="text-xs font-black uppercase tracking-widest text-slate-500">AI layer</div>
+                <div class="mt-2 font-bold text-white">Optional Gemini analysis</div>
+              </div>
+            </div>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <button class="case-btn btn btn-primary focus-ring" data-case="impact">View case study</button>
+              <a class="btn btn-ghost focus-ring" href="https://github.com/saneeshmorais16" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-tags="ai web">
+            <div class="mb-5 flex flex-wrap gap-2"><span class="tag">AI security</span><span class="tag">Agents</span></div>
+            <h3 class="text-3xl font-black tracking-tight">Agentic AI Security Lab</h3>
+            <p class="mt-5 leading-7 text-slate-400">Simulation product for agent actions, prompt attack checks, risk scoring, approval decisions, lineage and audit logs.</p>
+            <button class="case-btn mt-8 text-sm font-black text-cyan-300 hover:text-white" data-case="security">View breakdown →</button>
+          </article>
+
+          <article class="project-card reveal" data-tags="ai data">
+            <div class="mb-5 flex flex-wrap gap-2"><span class="tag">RAG</span><span class="tag">Embeddings</span></div>
+            <h3 class="text-3xl font-black tracking-tight">RAG Pipeline from Scratch</h3>
+            <p class="mt-5 leading-7 text-slate-400">Python retrieval system with document chunking, embeddings, vector storage and LLM querying through an Anthropic-style workflow.</p>
+            <button class="case-btn mt-8 text-sm font-black text-cyan-300 hover:text-white" data-case="rag">View breakdown →</button>
+          </article>
+
+          <article class="project-card reveal" data-tags="ai web">
+            <div class="mb-5 flex flex-wrap gap-2"><span class="tag">Product UX</span><span class="tag">API</span></div>
+            <h3 class="text-3xl font-black tracking-tight">Smart Mixologist AI</h3>
+            <p class="mt-5 leading-7 text-slate-400">Cocktail recommendation product using frontend filters and API endpoints for ingredient, mood and preference-based suggestions.</p>
+            <button class="case-btn mt-8 text-sm font-black text-cyan-300 hover:text-white" data-case="mixologist">View breakdown →</button>
+          </article>
+
+          <article class="project-card reveal" data-tags="data ai">
+            <div class="mb-5 flex flex-wrap gap-2"><span class="tag">NLP</span><span class="tag">Market data</span></div>
+            <h3 class="text-3xl font-black tracking-tight">AI Job Market Intelligence API</h3>
+            <p class="mt-5 leading-7 text-slate-400">NLP workflow for extracting skills, tools and capability gaps from job descriptions, built to support better targeting and reporting.</p>
+            <button class="case-btn mt-8 text-sm font-black text-cyan-300 hover:text-white" data-case="jobs">View breakdown →</button>
+          </article>
+
+          <article class="project-card reveal" data-tags="ai web">
+            <div class="mb-5 flex flex-wrap gap-2"><span class="tag">LLM</span><span class="tag">Dev tool</span></div>
+            <h3 class="text-3xl font-black tracking-tight">AI Code Review Tool</h3>
+            <p class="mt-5 leading-7 text-slate-400">Tool that reviews code files or repos with structured prompts and returns bugs, improvements, security notes and complexity scoring.</p>
+            <button class="case-btn mt-8 text-sm font-black text-cyan-300 hover:text-white" data-case="review">View breakdown →</button>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="bg-black/20 border-b border-white/10">
-      <div class="max-w-7xl mx-auto px-6 py-16">
-        <div class="flex items-end justify-between mb-6">
-          <h2 class="text-3xl font-bold">Featured Projects</h2>
-          <a href="https://github.com/saneeshmorais16" target="_blank" class="text-cyan-400 hover:underline">View GitHub →</a>
-        </div>
-
-        <!-- Filters + Search -->
-        <div class="mb-6 flex flex-wrap gap-3 items-center">
-          <button class="chip focus-ring" data-filter="all">All</button>
-          <button class="chip focus-ring" data-filter="ai">AI</button>
-          <button class="chip focus-ring" data-filter="data">Data</button>
-          <button class="chip focus-ring" data-filter="web">Web</button>
-          <input id="projectSearch" type="search" placeholder="Search projects…" class="px-4 py-2 rounded-lg text-black w-60 ml-2" aria-label="Search projects"/>
-        </div>
-
-        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-7">
-          <!-- 1 -->
-          <article class="rounded-xl p-6 bg-[var(--card)] card-border reveal" data-tags="ai web" data-title="Smart Mixologist Cocktail AI">
-            <h3 class="text-xl font-semibold mb-2">🍸 Smart Mixologist (Cocktail AI)</h3>
-            <p class="text-slate-300">AI bartender recommending cocktails by mood, ingredients, or “surprise me”.</p>
-            <p class="text-sm text-slate-400 mt-2">FastAPI • Next.js • PostgreSQL • OpenAI</p>
-            <div class="mt-4 flex gap-4">
-              <a class="text-cyan-400 hover:underline" href="#" title="Demo coming soon">Demo</a>
-              <a class="text-cyan-400 hover:underline" href="#" title="Private repo">Code</a>
-            </div>
-          </article>
-
-          <!-- 2 -->
-          <article class="rounded-xl p-6 bg-[var(--card)] card-border reveal" data-tags="data ai" data-title="Casino Revenue Dashboard">
-            <h3 class="text-xl font-semibold mb-2">🎰 Casino Revenue Dashboard</h3>
-            <p class="text-slate-300">Segmentation & revenue trends with actionable insights and reporting.</p>
-            <p class="text-sm text-slate-400 mt-2">Python • SQL • Pandas • Streamlit</p>
-            <div class="mt-4 flex gap-4">
-              <a class="text-cyan-400 hover:underline" target="_blank" href="https://github.com/saneeshmorais16">Code</a>
-            </div>
-          </article>
-
-          <!-- 3 -->
-          <article class="rounded-xl p-6 bg-[var(--card)] card-border reveal" data-tags="data" data-title="Job Market Intelligence">
-            <h3 class="text-xl font-semibold mb-2">📊 Job Market Intelligence</h3>
-            <p class="text-slate-300">Scraped 500+ UK AI/tech roles to map skills & salaries; produced dashboards.</p>
-            <p class="text-sm text-slate-400 mt-2">Python • BeautifulSoup • Viz</p>
-            <div class="mt-4 flex gap-4">
-              <a class="text-cyan-400 hover:underline" target="_blank" href="https://github.com/saneeshmorais16">Code</a>
-            </div>
-          </article>
-
-          <!-- 4 -->
-          <article class="rounded-xl p-6 bg-[var(--card)] card-border reveal" data-tags="ai web" data-title="AI Resume Analyzer">
-            <h3 class="text-xl font-semibold mb-2">📄 AI Resume Analyzer</h3>
-            <p class="text-slate-300">LLM matcher aligning CVs with job descriptions for better fit.</p>
-            <p class="text-sm text-slate-400 mt-2">Hugging Face • Streamlit • NLP</p>
-            <div class="mt-4 flex gap-4">
-              <a class="text-cyan-400 hover:underline" target="_blank" href="https://github.com/saneeshmorais16/resume-analyzer">Code</a>
-            </div>
-          </article>
-
-          <!-- 5 -->
-          <article class="rounded-xl p-6 bg-[var(--card)] card-border reveal" data-tags="ai web" data-title="Nestdore Property Match">
-            <h3 class="text-xl font-semibold mb-2">🏠 Nestdore Property Match</h3>
-            <p class="text-slate-300">Embeddings + vector search to match tenants & landlords.</p>
-            <p class="text-sm text-slate-400 mt-2">Supabase • Postgres • pgvector</p>
-            <div class="mt-4 flex gap-4">
-              <a class="text-cyan-400 hover:underline" target="_blank" href="https://saneeshmorais16.github.io/Property-Match-Making/">Live</a>
-            </div>
-          </article>
-
-          <!-- 6 -->
-          <article class="rounded-xl p-6 bg-[var(--card)] card-border reveal" data-tags="ai" data-title="SanMind Wellbeing Assistant">
-            <h3 class="text-xl font-semibold mb-2">🧠 SanMind (Concept)</h3>
-            <p class="text-slate-300">Wellbeing assistant: journaling, RAG insights, compassionate coaching.</p>
-            <p class="text-sm text-slate-400 mt-2">LLMs • Vector DB • RAG</p>
-            <div class="mt-4 flex gap-4">
-              <button class="text-cyan-400 hover:underline" onclick="openModal('sanmind')">Overview</button>
-            </div>
-          </article>
-
-          <!-- 7 -->
-          <article class="rounded-xl p-6 bg-[var(--card)] card-border reveal" data-tags="ai data" data-title="Savant NLP Research Assistant">
-            <h3 class="text-xl font-semibold mb-2">🔎 Savant NLP Research Assistant</h3>
-            <p class="text-slate-300">Automates research synthesis; prompt pipelines & evaluation.</p>
-            <p class="text-sm text-slate-400 mt-2">Python • Orchestration • Evals</p>
-            <div class="mt-4 flex gap-4">
-              <button class="text-cyan-400 hover:underline" onclick="openModal('savant')">Summary</button>
-            </div>
-          </article>
-
-          <!-- 8 -->
-          <article class="rounded-xl p-6 bg-[var(--card)] card-border reveal" data-tags="web data" data-title="ML Experiment Tracker">
-            <h3 class="text-xl font-semibold mb-2">🧪 ML Experiment Tracker</h3>
-            <p class="text-slate-300">Local-first tracker for experiments, metrics, and artifacts.</p>
-            <p class="text-sm text-slate-400 mt-2">FastAPI • SQLite • Charts</p>
-            <div class="mt-4 flex gap-4">
-              <a class="text-cyan-400 hover:underline" href="#" title="Repo or Gist">Code</a>
-            </div>
-          </article>
-        </div>
-
-        <!-- UPCOMING -->
-        <div class="mt-12">
-          <h3 class="text-2xl font-bold mb-4">Upcoming</h3>
-          <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-7">
-            <article class="rounded-xl p-6 bg-[var(--card)] card-border relative reveal" data-tags="ai web">
-              <span class="badge-upcoming">Upcoming</span>
-              <h4 class="text-lg font-semibold mb-2">🧪 Smart Mixologist v2 (Vision + RAG)</h4>
-              <p class="text-slate-300">Camera ingredient parsing, taste embeddings, vector recipe search.</p>
-              <p class="text-sm text-slate-400 mt-2">CLIP • FastAPI • pgvector • Next.js</p>
-              <div class="mt-3"><button class="text-cyan-400 hover:underline" onclick="openModal('mixologistV2')">Overview</button></div>
-            </article>
-            <article class="rounded-xl p-6 bg-[var(--card)] card-border relative reveal" data-tags="data">
-              <span class="badge-upcoming">Upcoming</span>
-              <h4 class="text-lg font-semibold mb-2">📈 Job Market Radar</h4>
-              <p class="text-slate-300">Daily scraping + trend charts; alerts for spikes in AI skill demand.</p>
-              <p class="text-sm text-slate-400 mt-2">Airflow • Timeseries • Viz</p>
-            </article>
-            <article class="rounded-xl p-6 bg-[var(--card)] card-border relative reveal" data-tags="ai">
-              <span class="badge-upcoming">Upcoming</span>
-              <h4 class="text-lg font-semibold mb-2">🔍 Research Summarizer</h4>
-              <p class="text-slate-300">Upload PDFs → RAG + critique pass → concise brief + citations.</p>
-              <p class="text-sm text-slate-400 mt-2">RAG • Critic Role • Citation</p>
-            </article>
+    <section id="stack" class="section-pad">
+      <div class="container-x">
+        <div class="mb-12 grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
+          <div class="reveal">
+            <div class="pill mb-5">Technical stack</div>
+            <h2 class="section-title">Strong enough to build, honest enough to defend.</h2>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- STACK (your grouped stacks) -->
-    <section id="stack" class="max-w-7xl mx-auto px-6 py-16">
-      <h2 class="text-3xl font-bold mb-10">Tech & Tools</h2>
-      <!-- Languages -->
-      <div class="mb-6 reveal">
-        <h3 class="text-xl font-semibold mb-3">Languages</h3>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Python</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">JavaScript</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">TypeScript (basic)</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">SQL</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">HTML</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">CSS / Tailwind</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Markdown</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Bash (basic)</span>
-        </div>
-      </div>
-      <!-- Frontend -->
-      <div class="mb-6 reveal">
-        <h3 class="text-xl font-semibold mb-3">Frontend</h3>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Next.js</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">React</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Tailwind CSS</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Framer Motion</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">shadcn/ui (usage)</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Chart.js / Recharts (basic)</span>
-        </div>
-      </div>
-      <!-- Backend & APIs -->
-      <div class="mb-6 reveal">
-        <h3 class="text-xl font-semibold mb-3">Backend & APIs</h3>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">FastAPI</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Node.js (basic)</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Next.js API Routes</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">REST</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Webhooks / OAuth (basic)</span>
-        </div>
-      </div>
-      <!-- AI / ML -->
-      <div class="mb-6 reveal">
-        <h3 class="text-xl font-semibold mb-3">AI / ML</h3>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">NLP</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">LLMs</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">RAG / Embeddings</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">OpenAI API</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Hugging Face</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Prompt Evals / Guardrails (basic)</span>
-        </div>
-      </div>
-      <!-- Data / Scraping / Apps -->
-      <div class="mb-6 reveal">
-        <h3 class="text-xl font-semibold mb-3">Data, Scraping & Apps</h3>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Pandas</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">BeautifulSoup</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Matplotlib</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Streamlit</span>
-        </div>
-      </div>
-      <!-- Databases & Storage -->
-      <div class="mb-6 reveal">
-        <h3 class="text-xl font-semibold mb-3">Databases & Storage</h3>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">PostgreSQL</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">SQLite</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Supabase</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">pgvector</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">SQLAlchemy (basic)</span>
-        </div>
-      </div>
-      <!-- Dev / Ops -->
-      <div class="mb-6 reveal">
-        <h3 class="text-xl font-semibold mb-3">Dev & Ops</h3>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Git & GitHub</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">GitHub Pages</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">GitHub Actions (basic)</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">Docker (basic)</span>
-          <span class="px-4 py-2 bg-[var(--card)] rounded-lg border border-gray-700/50">AWS (intro)</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- DEMO -->
-    <section id="demo" class="max-w-7xl mx-auto px-6 py-16">
-      <h2 class="text-3xl font-bold mb-3">Try Smart Mixologist (Mock)</h2>
-      <p class="text-slate-300 mb-6">Type an ingredient—get a suggested cocktail. (Client-side mock; backend coming soon.)</p>
-      <div class="flex flex-wrap items-center gap-3">
-        <input id="ingredient" type="text" placeholder="e.g., Vodka, Rum, Gin, Coffee" class="px-4 py-3 rounded-lg text-black w-72 focus-ring"/>
-        <button onclick="suggestCocktail()" class="px-5 py-3 rounded-lg bg-cyan-500 text-black font-semibold glow focus-ring">Suggest</button>
-        <span id="suggestion" class="text-cyan-400 text-lg ml-2"></span>
-      </div>
-    </section>
-
-    <!-- METRICS -->
-    <section id="metrics" class="bg-black/20 border-y border-white/10">
-      <div class="max-w-7xl mx-auto px-6 py-16">
-        <h2 class="text-3xl font-bold mb-10">Impact in Numbers</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="p-6 rounded-xl bg-[var(--card)] card-border text-center reveal">
-            <div class="text-4xl font-extrabold text-cyan-400">500+</div>
-            <div class="text-slate-300 mt-2">Job posts analyzed</div>
-          </div>
-          <div class="p-6 rounded-xl bg-[var(--card)] card-border text-center reveal">
-            <div class="text-4xl font-extrabold text-cyan-400">15%</div>
-            <div class="text-slate-300 mt-2">Reporting accuracy gain</div>
-          </div>
-          <div class="p-6 rounded-xl bg-[var(--card)] card-border text-center reveal">
-            <div class="text-4xl font-extrabold text-cyan-400">1,000+</div>
-            <div class="text-slate-300 mt-2">Cocktails served</div>
-          </div>
-          <div class="p-6 rounded-xl bg-[var(--card)] card-border text-center reveal">
-            <div class="text-4xl font-extrabold text-cyan-400">4+</div>
-            <div class="text-slate-300 mt-2">Industry projects</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ROADMAP -->
-    <section id="roadmap" class="max-w-7xl mx-auto px-6 py-16">
-      <h2 class="text-3xl font-bold mb-6">Roadmap</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
-          <h3 class="font-semibold text-cyan-300 mb-2">Now</h3>
-          <ul class="list-disc list-inside text-slate-300 space-y-1">
-            <li>Ship Smart Mixologist mock + API skeleton</li>
-            <li>Publish 2 case studies (Dashboard, Resume AI)</li>
-          </ul>
-        </div>
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
-          <h3 class="font-semibold text-cyan-300 mb-2">Next</h3>
-          <ul class="list-disc list-inside text-slate-300 space-y-1">
-            <li>Vision ingredient parsing POC</li>
-            <li>Job Market Radar with weekly trends</li>
-          </ul>
-        </div>
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
-          <h3 class="font-semibold text-cyan-300 mb-2">Later</h3>
-          <ul class="list-disc list-inside text-slate-300 space-y-1">
-            <li>Agentic resume critique v2</li>
-            <li>Research Summarizer with citations</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRESS / NEWSROOM -->
-    <section id="press" class="max-w-7xl mx-auto px-6 py-16">
-      <h2 class="text-3xl font-bold mb-6">Newsroom</h2>
-
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
-          <h3 class="font-semibold">One-liner & Tagline</h3>
-          <p class="text-slate-300 mt-2"><strong>One-liner:</strong> London-based AI student & engineer turning practical ML ideas into shipped products.</p>
-          <p class="text-slate-400 mt-1 italic">Tagline: “Where data meets design.”</p>
-        </div>
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
-          <h3 class="font-semibold">Media Contact</h3>
-          <ul class="text-slate-300 mt-2 space-y-1">
-            <li>Email: <a class="text-cyan-400 hover:underline" href="mailto:saneeshmorais@gmail.com">saneeshmorais@gmail.com</a></li>
-            <li>Location: London, UK (GMT)</li>
-            <li>Response: 24–48h</li>
-            <li>Booking: <a class="text-cyan-400 hover:underline" href="mailto:saneeshmorais@gmail.com?subject=Speaking%20/%20Interview%20request">Request a call</a></li>
-          </ul>
-        </div>
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
-          <h3 class="font-semibold">Fast Facts</h3>
-          <ul class="text-slate-300 mt-2 space-y-1">
-            <li>Role: AI Engineer & Software Architect</li>
-            <li>Focus: NLP, LLMs, data products</li>
-            <li>Status: Open to founder/ML roles</li>
-            <li>Highlights: Smart Mixologist, Resume AI, Job Market Intel</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6 mt-6">
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
-          <h3 class="font-semibold">Bio (90 words)</h3>
-          <p class="text-slate-300 mt-2">
-            Saneesh Morais is an AI Engineer and Software Architect based in London, focused on turning practical
-            machine-learning ideas into scalable products. He blends NLP and LLM experimentation with rigorous evaluation,
-            clean APIs, and thoughtful UX. His experience spans Savant Technologies and Smallcap.ai, alongside
-            high-pressure, customer-facing operations at the Hippodrome Casino. Recent work includes resume-matching NLP,
-            analytics dashboards, and RAG prototypes. He cares deeply about human-centered AI, rapid iteration, and
-            measurable impact, and thrives in founder-style environments where shipping, learning, and improving happen
-            continuously. He values clarity, ownership, and fast feedback.
+          <p class="section-subtitle reveal">
+            I keep my stack practical: Python and SQL for data, FastAPI for clean services, JavaScript for interfaces, and LLM/RAG workflows where they actually add value.
           </p>
         </div>
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
-          <h3 class="font-semibold">Downloadables</h3>
-          <ul class="text-slate-300 mt-2 space-y-1">
-            <li><a class="text-cyan-400 hover:underline" href="Saneesh_Morais_Resume.pdf" download>Résumé (PDF)</a></li>
-            <li><a class="text-cyan-400 hover:underline" href="qr_contacts_clickable_with_name_phone.png" download>QR Code (PNG)</a></li>
-          </ul>
-          <button id="shareSite" class="mt-4 px-4 py-2 rounded-lg bg-cyan-500 text-black font-semibold glow focus-ring">Share site</button>
+
+        <div class="skill-grid reveal">
+          <div class="skill"><span>Python</span><small>core</small></div>
+          <div class="skill"><span>SQL</span><small>core</small></div>
+          <div class="skill"><span>FastAPI</span><small>api</small></div>
+          <div class="skill"><span>JavaScript</span><small>web</small></div>
+          <div class="skill"><span>PostgreSQL</span><small>data</small></div>
+          <div class="skill"><span>SQLite</span><small>local</small></div>
+          <div class="skill"><span>MongoDB</span><small>data</small></div>
+          <div class="skill"><span>Docker</span><small>basic</small></div>
+          <div class="skill"><span>Pandas / NumPy</span><small>data</small></div>
+          <div class="skill"><span>scikit-learn</span><small>ml</small></div>
+          <div class="skill"><span>Random Forest / XGBoost</span><small>ml</small></div>
+          <div class="skill"><span>NLP / TF-IDF</span><small>ai</small></div>
+          <div class="skill"><span>LLM Workflows</span><small>ai</small></div>
+          <div class="skill"><span>RAG / Embeddings</span><small>ai</small></div>
+          <div class="skill"><span>Power BI / Tableau</span><small>viz</small></div>
+          <div class="skill"><span>GitHub Actions</span><small>ci/cd</small></div>
         </div>
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
-          <h3 class="font-semibold">Logos</h3>
-          <div class="mt-3 grid grid-cols-2 gap-3">
-            <!-- same inline SVG used for brand -->
-            <div class="rounded-lg border border-gray-700 bg-black/30 p-3 flex items-center justify-center">
-              <svg width="72" height="72" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <defs><linearGradient id="g3" x1="0" x2="1"><stop stop-color="#06b6d4"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs>
-                <rect width="96" height="96" rx="18" fill="#0b0f1a"/>
-                <path d="M24 64c8-2 15-7 16-16-6 4-13 3-16-5-3-8 3-15 10-17 9-2 18 3 23 11 5 8 5 19 0 27-6 9-16 14-27 14h-6z" fill="url(#g3)"/>
-                <text x="52" y="62" font-family="Arial" font-size="28" fill="#e5e7eb" font-weight="700">SM</text>
-              </svg>
+      </div>
+    </section>
+
+    <section id="experience" class="section-pad border-y border-white/10 bg-white/[.015]">
+      <div class="container-x">
+        <div class="grid gap-10 lg:grid-cols-[.8fr_1.2fr]">
+          <div class="reveal">
+            <div class="pill mb-5">Experience</div>
+            <h2 class="section-title">Internship experience with real reporting, data and AI work.</h2>
+            <p class="section-subtitle mt-6">My experience is junior-level, but it is practical: data cleaning, reporting, SQL analysis, AI prototypes, documentation and stakeholder communication.</p>
+          </div>
+
+          <div class="timeline reveal">
+            <div class="timeline-item">
+              <div class="mb-1 text-sm font-black uppercase tracking-widest text-cyan-300">Jan 2025 — Mar 2025</div>
+              <h3 class="text-2xl font-black">Data Analyst Intern — Savant Technologies</h3>
+              <p class="mt-3 leading-7 text-slate-400">Worked with SQL, Python and pandas to clean, validate and analyse business data, improving reporting accuracy from 72% to 85% and reducing repeated reporting work.</p>
             </div>
-            <div class="rounded-lg border border-gray-700 bg-black/30 p-3 flex items-center justify-center">
-              <span class="text-2xl font-bold gradient-text">Saneesh&nbsp;Morais</span>
+
+            <div class="timeline-item">
+              <div class="mb-1 text-sm font-black uppercase tracking-widest text-cyan-300">May 2024 — Aug 2024</div>
+              <h3 class="text-2xl font-black">AI Intern — 3NS.ai</h3>
+              <p class="mt-3 leading-7 text-slate-400">Built AI and data workflow prototypes across stock data, sentiment analysis and ranking signals using Python and structured analysis.</p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="mb-1 text-sm font-black uppercase tracking-widest text-cyan-300">May 2024 — Present</div>
+              <h3 class="text-2xl font-black">Cocktail Bartender — The Hippodrome Casino</h3>
+              <p class="mt-3 leading-7 text-slate-400">Handled high-volume customer service in a fast-paced London venue, strengthening communication, pressure handling and operational discipline.</p>
+            </div>
+
+            <div class="timeline-item pb-0">
+              <div class="mb-1 text-sm font-black uppercase tracking-widest text-cyan-300">2026</div>
+              <h3 class="text-2xl font-black">BSc Computing with Artificial Intelligence Technology</h3>
+              <p class="mt-3 leading-7 text-slate-400">Recently completed at Northumbria University London, expected First Class Honours. Focused on AI programming, machine learning, cloud ML and final-year project work.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAVORITE QUESTIONS -->
-    <section id="fav-questions" class="max-w-7xl mx-auto px-6 py-16">
-      <h2 class="text-3xl font-bold mb-6">Favorite Interview Questions</h2>
-      <div class="grid md:grid-cols-2 gap-6 mb-6">
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
-          <h3 class="font-semibold">Product & Strategy</h3>
-          <ul class="text-slate-300 mt-2 space-y-2 list-disc list-inside">
-            <li>What real problem does this feature solve, and for whom?</li>
-            <li>How would you validate it in one week with minimal engineering?</li>
-            <li>What’s your North Star metric and the 2–3 guardrail metrics?</li>
-            <li>When would you choose rules over LLMs, and why?</li>
-            <li>Tell me about a time a metric misled you. What did you change?</li>
-          </ul>
-        </div>
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
-          <h3 class="font-semibold">Execution & Ownership</h3>
-          <ul class="text-slate-300 mt-2 space-y-2 list-disc list-inside">
-            <li>Describe a 0→1 project you shipped. What made it succeed?</li>
-            <li>How do you de-risk unknowns before committing a full sprint?</li>
-            <li>What tradeoffs did you make on performance vs. delivery speed?</li>
-            <li>What’s your post-launch checklist (observability, alerts, rollbacks)?</li>
-            <li>How do you handle “good enough now” vs. “perfect later”?</li>
-          </ul>
-        </div>
-      </div>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
-          <h3 class="font-semibold">AI / ML Depth</h3>
-          <ul class="text-slate-300 mt-2 space-y-2 list-disc list-inside">
-            <li>Walk me through your evals: datasets, metrics, and error analysis.</li>
-            <li>How do you prevent prompt overfitting and silent regressions?</li>
-            <li>RAG design: chunking, retrieval strategy, and grounding checks?</li>
-            <li>Hallucination controls: where do you place guardrails and why?</li>
-            <li>Latency & cost: where have you optimized tokens or model choice?</li>
-          </ul>
-        </div>
-        <div class="p-6 rounded-xl bg-[var(--card)] card-border reveal">
-          <h3 class="font-semibold">Data & Experimentation</h3>
-          <ul class="text-slate-300 mt-2 space-y-2 list-disc list-inside">
-            <li>What’s your smallest experiment to detect causal impact?</li>
-            <li>When A/B is impractical, how do you gain confidence?</li>
-            <li>Data quality: what automated checks do you set up on Day 1?</li>
-            <li>How do you debug “it works locally but not in prod” with data?</li>
-            <li>What’s a metric you stopped using? Why?</li>
-          </ul>
-        </div>
-      </div>
-      <p class="text-slate-500 text-sm mt-6">Tip: I value clarity, measurable impact, and fast feedback loops.</p>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="max-w-7xl mx-auto px-6 py-16">
-      <h2 class="text-3xl font-bold mb-8">Experience</h2>
-      <ol class="relative border-l-2 border-cyan-500/60 pl-6 space-y-8">
-        <li class="reveal">
-          <h3 class="font-semibold">Data Scientist Intern — Savant Technologies (2025)</h3>
-          <p class="text-slate-400">NLP + LLM pipelines to accelerate research synthesis; evaluation framework.</p>
-        </li>
-        <li class="reveal">
-          <h3 class="font-semibold">AI Intern — Smallcap.ai (2024)</h3>
-          <p class="text-slate-400">GenAI prototypes for financial intelligence; prompt engineering & analysis.</p>
-        </li>
-        <li class="reveal">
-          <h3 class="font-semibold">Bartender — Hippodrome Casino (2024–present)</h3>
-          <p class="text-slate-400">High-volume service environment, communication, resilience, leadership.</p>
-        </li>
-      </ol>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="max-w-7xl mx-auto px-6 py-16">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div class="reveal">
-          <h2 class="text-3xl font-bold mb-4">Let’s Connect</h2>
-          <p class="text-slate-300 mb-6">Open to graduate roles, AI internships, and founder collaborations.</p>
-          <div class="space-y-2">
-            <div>Email: <a class="text-cyan-400 hover:underline" href="mailto:saneeshmorais@gmail.com">saneeshmorais@gmail.com</a></div>
-            <div>LinkedIn: <a class="text-cyan-400 hover:underline" target="_blank" href="https://www.linkedin.com/in/saneesh-morais-581458227/">linkedin.com/in/saneesh-morais</a></div>
-            <div>GitHub: <a class="text-cyan-400 hover:underline" target="_blank" href="https://github.com/saneeshmorais16">github.com/saneeshmorais16</a></div>
-            <div>Portfolio: <a class="text-cyan-400 hover:underline" target="_blank" href="https://saneeshmorais16.github.io/saneesh_portfolio/">saneeshmorais16.github.io/saneesh_portfolio</a></div>
-          </div>
-          <div class="flex flex-wrap gap-3 mt-6">
-            <a href="Saneesh_Morais_Resume.pdf" download class="px-6 py-3 rounded-lg bg-cyan-500 text-black font-semibold glow focus-ring">📄 Download CV</a>
-            <a href="#press" class="px-6 py-3 rounded-lg border border-cyan-400 hover:bg-cyan-400 hover:text-black glow focus-ring">Press Kit</a>
-            <button id="printPage" class="px-6 py-3 rounded-lg border border-white/20 hover:bg-white/10 focus-ring">Print / Save PDF</button>
+    <section class="section-pad">
+      <div class="container-x">
+        <div class="premium-card reveal p-8 md:p-12">
+          <div class="grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
+            <div>
+              <div class="pill mb-6">How I work</div>
+              <p class="quote">
+                “I care about projects that survive the demo: clear problem, simple workflow, measured value, and code I can explain.”
+              </p>
+            </div>
+            <div class="grid gap-4">
+              <div class="rounded-3xl border border-white/10 bg-white/[.035] p-5">
+                <h3 class="font-black text-white">1. Start from the workflow</h3>
+                <p class="mt-2 text-sm leading-6 text-slate-400">I map the real task before choosing AI, rules, dashboards or APIs.</p>
+              </div>
+              <div class="rounded-3xl border border-white/10 bg-white/[.035] p-5">
+                <h3 class="font-black text-white">2. Build small but real</h3>
+                <p class="mt-2 text-sm leading-6 text-slate-400">I prefer a working prototype with honest limits over a polished fake demo.</p>
+              </div>
+              <div class="rounded-3xl border border-white/10 bg-white/[.035] p-5">
+                <h3 class="font-black text-white">3. Measure what changed</h3>
+                <p class="mt-2 text-sm leading-6 text-slate-400">I look for hours saved, fewer manual errors, faster decisions and better user confidence.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="text-center reveal">
-          <img src="saneesh_qr.png" alt="QR to Links" loading="lazy" class="w-40 h-40 mx-auto rounded-lg border border-cyan-400"/>
-          <div class="text-slate-400 mt-2 text-sm">Scan for all links</div>
-        </div>
       </div>
     </section>
 
-    <!-- CTA STRIP -->
-    <section class="bg-gradient-to-r from-cyan-600/20 via-blue-600/10 to-transparent border-t border-white/10">
-      <div class="max-w-7xl mx-auto px-6 py-10 text-center">
-        <h3 class="text-2xl font-semibold">Ready to build something meaningful?</h3>
-        <p class="text-slate-300 mt-2">Let’s prototype fast, validate with users, and scale with data.</p>
-        <a href="mailto:saneeshmorais@gmail.com" class="mt-4 inline-block px-6 py-3 rounded-lg bg-cyan-500 text-black font-semibold glow focus-ring">Contact Saneesh</a>
+    <section id="contact" class="section-pad border-t border-white/10 bg-white/[.015]">
+      <div class="container-x">
+        <div class="grid gap-10 lg:grid-cols-[1fr_.9fr] lg:items-center">
+          <div class="reveal">
+            <div class="pill mb-5">Contact</div>
+            <h2 class="section-title">Let’s build something useful.</h2>
+            <p class="section-subtitle mt-6">
+              I am open to junior AI engineer, software engineer, data analyst, AI product and technology internship roles in London and the UK.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a class="btn btn-primary focus-ring" href="mailto:saneeshmorais@gmail.com">saneeshmorais@gmail.com</a>
+              <button id="copyEmail" class="btn btn-ghost focus-ring">Copy email</button>
+              <a class="btn btn-ghost focus-ring" href="Saneesh_Morais_Resume.pdf" download>Download CV</a>
+            </div>
+          </div>
+
+          <div class="premium-card reveal p-7">
+            <h3 class="text-2xl font-black tracking-tight">Primary links</h3>
+            <div class="mt-6 grid gap-3">
+              <a class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[.035] p-4 transition hover:border-cyan-300/40" href="https://www.linkedin.com/in/saneesh-morais-581458227/" target="_blank" rel="noopener">
+                <span>LinkedIn</span><span class="text-cyan-300">Open →</span>
+              </a>
+              <a class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[.035] p-4 transition hover:border-cyan-300/40" href="https://github.com/saneeshmorais16" target="_blank" rel="noopener">
+                <span>GitHub</span><span class="text-cyan-300">Open →</span>
+              </a>
+              <a class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[.035] p-4 transition hover:border-cyan-300/40" href="https://saneeshmorais16.github.io/Saneesh_Portfolio_16/" target="_blank" rel="noopener">
+                <span>Portfolio</span><span class="text-cyan-300">Open →</span>
+              </a>
+              <a class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[.035] p-4 transition hover:border-cyan-300/40" href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3AMorais%3BSaneesh%0AFN%3ASaneesh%20Morais%0AEMAIL%3Bsaneeshmorais%40gmail.com%0AURL%3Ahttps%3A%2F%2Fgithub.com%2Fsaneeshmorais16%0AEND%3AVCARD" download="Saneesh_Morais.vcf">
+                <span>vCard</span><span class="text-cyan-300">Save →</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-6 py-8 text-center text-slate-400">
-      © 2025 Created by <span class="text-cyan-400 font-semibold">Saneesh Morais</span> • <a class="hover:text-cyan-400" href="#">Back to top</a>
+    <div class="container-x flex flex-col gap-4 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
+      <p>© <span id="year"></span> Saneesh Morais. Built as a premium one-file portfolio.</p>
+      <div class="flex gap-4">
+        <a class="hover:text-cyan-300" href="#main">Back to top</a>
+        <button id="printPage" class="hover:text-cyan-300">Print / Save PDF</button>
+      </div>
     </div>
   </footer>
 
-  <!-- FLOATING BACK TO TOP -->
-  <button id="toTop" class="px-3 py-2 bg-cyan-500 text-black rounded-md glow focus-ring" aria-label="Back to top">↑</button>
+  <button id="toTop" aria-label="Back to top">↑</button>
 
-  <!-- MODAL -->
-  <div id="modal" class="fixed inset-0 hidden items-center justify-center bg-black/70 z-50">
-    <div class="max-w-2xl w-[92%] bg-[var(--card)] rounded-xl border border-white/10 p-6 relative">
-      <button class="absolute top-3 right-3 px-2 py-1 rounded bg-white/10 focus-ring" onclick="closeModal()">✕</button>
-      <h3 id="modalTitle" class="text-xl font-semibold mb-3"></h3>
-      <div class="grid gap-3 text-slate-300">
-        <div><span class="text-cyan-400 font-semibold">Problem:</span> <span id="modalProblem"></span></div>
-        <div><span class="text-cyan-400 font-semibold">Solution:</span> <span id="modalSolution"></span></div>
-        <div><span class="text-cyan-400 font-semibold">Impact:</span> <span id="modalImpact"></span></div>
-        <div class="text-sm text-slate-400" id="modalStack"></div>
+  <div id="caseModal" class="fixed inset-0 z-[85] hidden items-center justify-center bg-slate-950/72 p-4 backdrop-blur-xl">
+    <div class="premium-card w-full max-w-3xl p-6 md:p-8">
+      <div class="mb-6 flex items-start justify-between gap-4">
+        <div>
+          <div id="caseTag" class="mb-3 inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-xs font-black uppercase tracking-widest text-cyan-200"></div>
+          <h3 id="caseTitle" class="text-3xl font-black tracking-tight"></h3>
+        </div>
+        <button id="closeCase" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/5 text-white focus-ring">×</button>
+      </div>
+
+      <div class="grid gap-4">
+        <div class="rounded-3xl border border-white/10 bg-white/[.035] p-5">
+          <div class="text-xs font-black uppercase tracking-widest text-slate-500">Problem</div>
+          <p id="caseProblem" class="mt-2 leading-7 text-slate-300"></p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/[.035] p-5">
+          <div class="text-xs font-black uppercase tracking-widest text-slate-500">Solution</div>
+          <p id="caseSolution" class="mt-2 leading-7 text-slate-300"></p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/[.035] p-5">
+          <div class="text-xs font-black uppercase tracking-widest text-slate-500">Stack / evidence</div>
+          <p id="caseStack" class="mt-2 leading-7 text-slate-300"></p>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Command Palette -->
-  <div id="cmdk" class="fixed inset-0 hidden items-start justify-center bg-black/60 z-[60] pt-24">
-    <div class="w-[92%] max-w-xl bg-[var(--card)] rounded-xl border border-white/10 shadow-xl">
-      <input id="cmdk-input" placeholder="Search sections or actions..."
-             class="w-full px-4 py-3 bg-transparent outline-none border-b border-white/10"
-             aria-label="Command palette" />
-      <ul id="cmdk-list" class="max-h-[50vh] overflow-auto"></ul>
+  <div id="command" class="command" aria-hidden="true">
+    <div class="command-panel">
+      <input id="commandInput" placeholder="Jump to a section or action..." aria-label="Command palette input" />
+      <ul id="commandList"></ul>
     </div>
   </div>
 
-  <!-- JSON-LD Projects -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ItemList",
-    "name":"Featured Projects",
-    "itemListElement":[
-      { "@type":"CreativeWork", "position":1, "name":"Smart Mixologist (Cocktail AI)", "description":"AI bartender recommending cocktails by mood, ingredients, or surprise.", "url":"https://github.com/saneeshmorais16" },
-      { "@type":"CreativeWork", "position":2, "name":"Casino Revenue Dashboard", "description":"Segmentation & revenue trends for a casino.", "url":"https://github.com/saneeshmorais16" },
-      { "@type":"CreativeWork", "position":3, "name":"Job Market Intelligence", "description":"Scraped 500+ UK AI/tech roles to map skills & salaries.", "url":"https://github.com/saneeshmorais16" },
-      { "@type":"CreativeWork", "position":4, "name":"AI Resume Analyzer", "description":"LLM matcher aligning CVs with job descriptions.", "url":"https://github.com/saneeshmorais16/resume-analyzer" }
-    ]
-  }
-  </script>
-
-  <!-- JS -->
   <script>
-    // --- Mobile menu ---
-    const navBtn = document.getElementById('navBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    navBtn?.addEventListener('click', ()=>{
-      const expanded = navBtn.getAttribute('aria-expanded') === 'true';
-      navBtn.setAttribute('aria-expanded', (!expanded).toString());
-      mobileMenu.classList.toggle('hidden');
+    const $ = (sel, root = document) => root.querySelector(sel);
+    const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
+
+    const progress = $('#progress');
+    const toTop = $('#toTop');
+
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      const max = doc.scrollHeight - doc.clientHeight;
+      const pct = max ? (doc.scrollTop / max) * 100 : 0;
+      progress.style.width = pct + '%';
+      toTop.style.display = doc.scrollTop > 600 ? 'grid' : 'none';
+    }, { passive:true });
+
+    toTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+    $('#year').textContent = new Date().getFullYear();
+
+    const menuBtn = $('#menuBtn');
+    const mobileMenu = $('#mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
+    $$('#mobileMenu a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
 
-    // --- Scroll progress + toTop ---
-    const progress = document.getElementById('progress');
-    window.addEventListener('scroll', ()=>{
-      const h = document.documentElement;
-      const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
-      progress.style.width = scrolled + '%';
-      document.getElementById('toTop').style.display = (h.scrollTop > 500) ? 'block' : 'none';
-    });
-    document.getElementById('toTop')?.addEventListener('click', ()=> window.scrollTo({ top:0, behavior:'smooth' }));
-
-    // --- Copy email ---
-    document.getElementById('copyEmail')?.addEventListener('click', async ()=>{
-      try {
-        await navigator.clipboard.writeText('saneeshmorais@gmail.com');
-        const btn = document.getElementById('copyEmail');
-        const old = btn.textContent;
-        btn.textContent = 'Email copied ✔';
-        setTimeout(()=> btn.textContent = old, 1500);
-      } catch(e) { alert('Copy failed, email: saneeshmorais@gmail.com'); }
-    });
-
-    // --- Demo suggester (mock) ---
-    function suggestCocktail(){
-      const v = (document.getElementById('ingredient')?.value || "").toLowerCase();
-      const s = document.getElementById('suggestion');
-      const map = [
-        {k:'vodka', v:'Moscow Mule 🍹'},
-        {k:'rum', v:'Mojito 🌿'},
-        {k:'gin', v:'Negroni 🍊'},
-        {k:'coffee', v:'Espresso Martini ☕🍸'},
-        {k:'tequila', v:'Margarita 🍋'},
-        {k:'whisky', v:'Whisky Sour 🥃'}
-      ];
-      const hit = map.find(x => v.includes(x.k));
-      if(s) s.textContent = hit ? `Try: ${hit.v}` : 'Surprise: Tom Collins 🍋';
-    }
-    window.suggestCocktail = suggestCocktail;
-
-    // --- Project filters + memory + search ---
-    const filterBtns = document.querySelectorAll('[data-filter]');
-    const projectCards = document.querySelectorAll('#projects article');
-    const projectSearch = document.getElementById('projectSearch');
-
-    function applyFilters(selected, query){
-      projectCards.forEach(card=>{
-        const tags = (card.getAttribute('data-tags')||'').split(' ');
-        const title = (card.getAttribute('data-title')||'').toLowerCase();
-        const inTag = selected==='all' || tags.includes(selected);
-        const inSearch = !query || title.includes(query);
-        card.style.display = (inTag && inSearch) ? '' : 'none';
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
       });
-    }
-    let selectedFilter = localStorage.getItem('projFilter') || 'all';
-    applyFilters(selectedFilter, '');
+    }, { threshold:.14 });
+    $$('.reveal').forEach(el => io.observe(el));
 
-    filterBtns.forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        selectedFilter = btn.getAttribute('data-filter');
-        localStorage.setItem('projFilter', selectedFilter);
-        applyFilters(selectedFilter, (projectSearch?.value||'').toLowerCase());
+    $$('.premium-card, .project-card').forEach(card => {
+      card.addEventListener('pointermove', e => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
+        card.style.setProperty('--my', (e.clientY - rect.top) + 'px');
       });
     });
-    projectSearch?.addEventListener('input', (e)=>{
-      applyFilters(selectedFilter, e.target.value.toLowerCase());
-    });
-
-    // --- Case-study modal ---
-    const modal = document.getElementById('modal');
-    const mTitle = document.getElementById('modalTitle');
-    const mProb  = document.getElementById('modalProblem');
-    const mSol   = document.getElementById('modalSolution');
-    const mImp   = document.getElementById('modalImpact');
-    const mStack = document.getElementById('modalStack');
 
     const CASES = {
-      mixologistV2:{ title:'Smart Mixologist v2',
-        problem:'Non-tech users struggle to discover cocktails from what they have.',
-        solution:'Vision + embeddings to parse ingredients and map to taste profiles via RAG.',
-        impact:'Delightful discovery; reduces waste; premium upsell opportunities.',
-        stack:'CLIP • FastAPI • pgvector • Next.js' },
-      sanmind:{ title:'SanMind — Wellbeing Assistant',
-        problem:'Students lack consistent reflection and compassionate feedback loops.',
-        solution:'RAG journaling + coaching prompts with safeguards and progress views.',
-        impact:'Higher adherence, better mental clarity.',
-        stack:'LLMs • Vector DB • Guardrails' },
-      savant:{ title:'Savant NLP Research Assistant',
-        problem:'Manual literature review is slow and inconsistent.',
-        solution:'Prompt pipelines + evals to synthesize findings with confidence signals.',
-        impact:'Hours saved per brief; better coverage.',
-        stack:'Python • Orchestration • Evals' }
+      impact: {
+        tag:'AI automation',
+        title:'AI Impact OS',
+        problem:'AI ideas often stay scattered across chats, spreadsheets and meetings. Teams struggle to decide which workflow to automate first, who owns it, and whether the prototype actually saved time.',
+        solution:'A FastAPI and SQLite system that captures workflow pain, scores value, stores evidence, tracks lifecycle status, creates CEO-ready briefs and exports reports for decision-making.',
+        stack:'FastAPI, SQLite, SQLAlchemy-style structure, vanilla HTML/CSS/JS, optional Gemini analysis, scoring logic, CSV export, audit-friendly lifecycle states.'
+      },
+      security: {
+        tag:'Agent governance',
+        title:'Agentic AI Security Lab',
+        problem:'AI agents can call tools, access data and make decisions quickly, but without control layers it becomes hard to understand risk, intent and approval needs.',
+        solution:'A simulation layer that infers agent/tool/action intent, detects prompt attack patterns, scores risk, generates approval records and creates lineage/audit outputs.',
+        stack:'Python, FastAPI thinking, deterministic intent routing, risk scoring, policy decisions, audit logging, optional Gemini support with fallback behaviour.'
+      },
+      rag: {
+        tag:'Retrieval systems',
+        title:'RAG Pipeline from Scratch',
+        problem:'LLMs are weak when they need grounded answers from private documents unless retrieval, chunking and source control are handled properly.',
+        solution:'A Python RAG workflow with document chunking, embeddings, vector storage and LLM querying, designed to answer from retrieved context rather than memory alone.',
+        stack:'Python, embeddings, ChromaDB-style vector storage, document chunking, Anthropic/OpenAI-style API calls, retrieval and grounded response patterns.'
+      },
+      mixologist: {
+        tag:'AI product UX',
+        title:'Smart Mixologist AI',
+        problem:'People often know what ingredients they have but not what to make, especially when taste, mood and context matter.',
+        solution:'A recommendation product that lets users filter by ingredients, mood and preference, backed by API endpoints for cocktail suggestions.',
+        stack:'Frontend filters, backend API thinking, recommendation logic, FastAPI/Next.js variants, practical UX from hospitality experience.'
+      },
+      jobs: {
+        tag:'NLP analytics',
+        title:'AI Job Market Intelligence API',
+        problem:'Job descriptions are noisy, repetitive and hard to compare manually when trying to understand skill demand and application fit.',
+        solution:'An NLP workflow that extracts tools, skills, role patterns and capability gaps from job descriptions to support targeted applications and market analysis.',
+        stack:'Python, NLP, TF-IDF-style extraction, structured outputs, reporting logic and dashboard-ready data.'
+      },
+      review: {
+        tag:'Developer tooling',
+        title:'AI Code Review Tool',
+        problem:'Junior developers can miss bugs, security risks or complexity issues when reviewing their own code under time pressure.',
+        solution:'A code review assistant that accepts code files or repo context and returns structured review notes covering bugs, improvements, security concerns and complexity.',
+        stack:'Python, LLM prompting, structured output, code analysis workflow and developer-facing reporting.'
+      }
     };
 
-    function openModal(key){
-      const c = CASES[key]; if(!c) return;
-      mTitle.textContent = c.title; mProb.textContent = c.problem;
-      mSol.textContent = c.solution; mImp.textContent = c.impact;
-      mStack.textContent = c.stack;
-      modal.classList.remove('hidden'); modal.classList.add('flex');
-    }
-    function closeModal(){ modal.classList.add('hidden'); modal.classList.remove('flex'); }
-    window.openModal = openModal; window.closeModal = closeModal;
+    const modal = $('#caseModal');
+    const openCase = key => {
+      const c = CASES[key];
+      if(!c) return;
+      $('#caseTag').textContent = c.tag;
+      $('#caseTitle').textContent = c.title;
+      $('#caseProblem').textContent = c.problem;
+      $('#caseSolution').textContent = c.solution;
+      $('#caseStack').textContent = c.stack;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    };
+    const closeCase = () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    };
+    $$('.case-btn').forEach(btn => btn.addEventListener('click', () => openCase(btn.dataset.case)));
+    $('#closeCase').addEventListener('click', closeCase);
+    modal.addEventListener('click', e => { if(e.target === modal) closeCase(); });
+    document.addEventListener('keydown', e => { if(e.key === 'Escape') { closeCase(); closeCommand(); } });
 
-    // --- Reveal on scroll (IntersectionObserver) ---
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    const filterButtons = $$('.filter-btn');
+    const projectCards = $$('.project-card');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        projectCards.forEach(card => {
+          const tags = (card.dataset.tags || '').split(' ');
+          const show = filter === 'all' || tags.includes(filter);
+          card.style.display = show ? '' : 'none';
+        });
       });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+    });
 
-    // --- Share button (Web Share API with fallback) ---
-    document.getElementById('shareSite')?.addEventListener('click', async ()=>{
-      const data = { title: document.title, text: 'Check out Saneesh Morais — AI Engineer & Tech Founder', url: window.location.href };
-      if(navigator.share){ try{ await navigator.share(data); } catch(_){} }
-      else{
-        try{
-          await navigator.clipboard.writeText(data.url);
-          alert('Link copied to clipboard!');
-        } catch(_){ window.prompt('Copy this link:', data.url); }
+    $('#copyEmail').addEventListener('click', async () => {
+      const email = 'saneeshmorais@gmail.com';
+      try {
+        await navigator.clipboard.writeText(email);
+        const original = $('#copyEmail').textContent;
+        $('#copyEmail').textContent = 'Copied ✔';
+        setTimeout(() => $('#copyEmail').textContent = original, 1500);
+      } catch(_) {
+        window.location.href = 'mailto:' + email;
       }
     });
 
-    // --- Print / Save PDF shortcut ---
-    document.getElementById('printPage')?.addEventListener('click', ()=> window.print());
+    $('#printPage').addEventListener('click', () => window.print());
 
-    // --- Keyboard shortcuts ---
-    // g p → go to Projects, g c → go to Contact, / → focus search
-    let seq = '';
-    window.addEventListener('keydown',(e)=>{
-      if(e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA'){
-        e.preventDefault();
-        document.getElementById('projectSearch')?.focus();
-        return;
-      }
-      if(e.key.length === 1){ seq = (seq + e.key.toLowerCase()).slice(-2); }
-      if(seq === 'gp'){ document.getElementById('projects')?.scrollIntoView({behavior:'smooth'}); seq=''; }
-      if(seq === 'gc'){ document.getElementById('contact')?.scrollIntoView({behavior:'smooth'}); seq=''; }
-    });
-
-    // --- Command Palette (Ctrl/Cmd+K) ---
-    const PALETTE = [
-      {label:'Go to Projects', action:()=>document.getElementById('projects')?.scrollIntoView({behavior:'smooth'})},
-      {label:'Go to Contact',  action:()=>document.getElementById('contact')?.scrollIntoView({behavior:'smooth'})},
-      {label:'Download CV',    action:()=>window.open('Saneesh_Morais_Resume.pdf','_blank')},
-      {label:'Share site',     action:()=>document.getElementById('shareSite')?.click()},
-      {label:'Email Saneesh',  action:()=>window.location.href='mailto:saneeshmorais@gmail.com'},
-      {label:'Open GitHub',    action:()=>window.open('https://github.com/saneeshmorais16','_blank')},
-      {label:'Open LinkedIn',  action:()=>window.open('https://www.linkedin.com/in/saneesh-morais-581458227/','_blank')}
+    const command = $('#command');
+    const commandInput = $('#commandInput');
+    const commandList = $('#commandList');
+    const COMMANDS = [
+      {label:'Go to projects', hint:'#projects', action:() => $('#projects').scrollIntoView({behavior:'smooth'})},
+      {label:'Go to technical stack', hint:'#stack', action:() => $('#stack').scrollIntoView({behavior:'smooth'})},
+      {label:'Go to experience', hint:'#experience', action:() => $('#experience').scrollIntoView({behavior:'smooth'})},
+      {label:'Go to contact', hint:'#contact', action:() => $('#contact').scrollIntoView({behavior:'smooth'})},
+      {label:'Email Saneesh', hint:'mailto', action:() => window.location.href='mailto:saneeshmorais@gmail.com'},
+      {label:'Open GitHub', hint:'external', action:() => window.open('https://github.com/saneeshmorais16','_blank')},
+      {label:'Open LinkedIn', hint:'external', action:() => window.open('https://www.linkedin.com/in/saneesh-morais-581458227/','_blank')},
+      {label:'Download CV', hint:'pdf', action:() => window.open('Saneesh_Morais_Resume.pdf','_blank')}
     ];
-    const cmdk = document.getElementById('cmdk');
-    const cmdInput = document.getElementById('cmdk-input');
-    const cmdList = document.getElementById('cmdk-list');
-    const openCmd = () => { cmdk.classList.remove('hidden'); cmdk.classList.add('flex'); cmdInput.value=''; renderCmd(PALETTE); cmdInput.focus(); }
-    const closeCmd = () => { cmdk.classList.add('hidden'); cmdk.classList.remove('flex'); }
-    function renderCmd(items){ cmdList.innerHTML = items.map((it,i)=>`<li role="option" data-i="${i}" tabindex="-1">${it.label}</li>`).join(''); }
-    renderCmd(PALETTE);
 
-    document.getElementById('openCmd')?.addEventListener('click', openCmd);
-    document.addEventListener('keydown', (e)=>{
-      if((e.ctrlKey || e.metaKey) && e.key.toLowerCase()==='k'){ e.preventDefault(); openCmd(); }
-      if(e.key==='Escape' && !cmdk.classList.contains('hidden')) closeCmd();
+    function renderCommands(items){
+      commandList.innerHTML = items.map((item, index) => `<li data-index="${index}"><span>${item.label}</span><small>${item.hint}</small></li>`).join('');
+    }
+    function openCommand(){
+      command.classList.add('open');
+      command.setAttribute('aria-hidden','false');
+      commandInput.value = '';
+      renderCommands(COMMANDS);
+      commandInput.focus();
+    }
+    function closeCommand(){
+      command.classList.remove('open');
+      command.setAttribute('aria-hidden','true');
+    }
+    $('#openCommand').addEventListener('click', openCommand);
+    command.addEventListener('click', e => { if(e.target === command) closeCommand(); });
+    commandInput.addEventListener('input', () => {
+      const q = commandInput.value.toLowerCase().trim();
+      renderCommands(COMMANDS.filter(c => c.label.toLowerCase().includes(q) || c.hint.toLowerCase().includes(q)));
     });
-    cmdInput?.addEventListener('input', (e)=>{
-      const q = e.target.value.toLowerCase().trim();
-      renderCmd(PALETTE.filter(it=>it.label.toLowerCase().includes(q)));
+    commandList.addEventListener('click', e => {
+      const li = e.target.closest('li');
+      if(!li) return;
+      const q = commandInput.value.toLowerCase().trim();
+      const items = q ? COMMANDS.filter(c => c.label.toLowerCase().includes(q) || c.hint.toLowerCase().includes(q)) : COMMANDS;
+      items[Number(li.dataset.index)]?.action();
+      closeCommand();
     });
-    cmdList.addEventListener('click', (e)=>{
-      const li = e.target.closest('li'); if(!li) return;
-      const idx = +li.dataset.i;
-      const q = cmdInput.value.toLowerCase().trim();
-      const current = (q? PALETTE.filter(it=>it.label.toLowerCase().includes(q)) : PALETTE);
-      current[idx]?.action(); closeCmd();
+
+    document.addEventListener('keydown', e => {
+      const isTyping = ['INPUT','TEXTAREA'].includes(document.activeElement.tagName);
+      if((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k'){
+        e.preventDefault();
+        openCommand();
+      }
+      if(!isTyping && e.key === '/'){
+        e.preventDefault();
+        openCommand();
+      }
     });
-    cmdk.addEventListener('click', (e)=>{ if(e.target===cmdk) closeCmd(); });
   </script>
 </body>
 </html>
-
