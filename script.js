@@ -8,6 +8,11 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
+function closeMenu() {
+  navLinks?.classList.remove("open");
+  menuToggle?.setAttribute("aria-expanded", "false");
+}
+
 menuToggle?.addEventListener("click", () => {
   const isOpen = navLinks.classList.toggle("open");
   menuToggle.setAttribute("aria-expanded", String(isOpen));
@@ -15,8 +20,13 @@ menuToggle?.addEventListener("click", () => {
 
 navLinks?.addEventListener("click", (event) => {
   if (event.target.matches("a")) {
-    navLinks.classList.remove("open");
-    menuToggle?.setAttribute("aria-expanded", "false");
+    closeMenu();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeMenu();
   }
 });
 
@@ -26,7 +36,8 @@ filterButtons.forEach((button) => {
     filterButtons.forEach((item) => item.classList.toggle("active", item === button));
     projectCards.forEach((card) => {
       const categories = (card.dataset.category || "").split(" ");
-      card.classList.toggle("hidden", filter !== "all" && !categories.includes(filter));
+      const isVisible = filter === "all" || categories.includes(filter);
+      card.classList.toggle("hidden", !isVisible);
     });
   });
 });
