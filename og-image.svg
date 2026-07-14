@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Saneesh Morais AI Graduate Portfolio</title>
+  <desc id="desc">Open Graph image for the Saneesh Morais portfolio website.</desc>
+  <rect width="1200" height="630" fill="#f6f8f5"/>
+  <circle cx="135" cy="90" r="260" fill="#d8ece8"/>
+  <circle cx="1050" cy="140" r="230" fill="#f2e6c4"/>
+  <rect x="96" y="96" width="1008" height="438" rx="34" fill="#ffffff" stroke="#dfe7df"/>
+  <text x="150" y="220" fill="#0f766e" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="5">AI GRADUATE PORTFOLIO</text>
+  <text x="150" y="315" fill="#13201a" font-family="Arial, sans-serif" font-size="74" font-weight="800">Saneesh Morais</text>
+  <text x="150" y="390" fill="#5b6b61" font-family="Arial, sans-serif" font-size="34">Python - FastAPI - RAG - Automation - Data</text>
+  <text x="150" y="455" fill="#12473f" font-family="Arial, sans-serif" font-size="28" font-weight="700">London, United Kingdom</text>
+</svg>
